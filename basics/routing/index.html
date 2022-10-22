@@ -749,7 +749,7 @@
 <h3 id="routes">Типы в routes</h3>
 <p>Типы маршрутов — это способ сопоставления параметра маршрута по типу. 
 Например, чтобы <code>@user_id</code> был целым числом. Сделать это можно, добавив после параметра двоеточие <code>:</code> и тип:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">Route</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/dashboard/@user_id:string&#39;</span><span class="p">,</span> <span class="s1">&#39;WelcomeController@show&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">Route</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/dashboard/@user_id:int&#39;</span><span class="p">,</span> <span class="s1">&#39;WelcomeController@show&#39;</span><span class="p">)</span>
 </code></pre></div></p>
 <h4 id="_12">Доступные типы маршрутов:</h4>
 <ul>

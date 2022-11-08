@@ -1,5 +1,6 @@
 .idea
 idea
-docs
 poetry.lock
 pyproject.toml
+venv
+env

@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#middleware" class="md-skip">
+        <a href="#middleware-masonite" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -324,14 +324,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#middleware_1" class="md-nav__link">
+  <a href="#middleware" class="md-nav__link">
     Middleware маршрутизации
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#middleware_2" class="md-nav__link">
+  <a href="#middleware_1" class="md-nav__link">
     Параметры middleware
   </a>
   
@@ -345,14 +345,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#middleware_3" class="md-nav__link">
+  <a href="#middleware_2" class="md-nav__link">
     Создание middleware
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#middleware_4" class="md-nav__link">
+  <a href="#middleware_3" class="md-nav__link">
     Использование middleware
   </a>
   
@@ -409,6 +409,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../environments/" class="md-nav__link">
+        Environments
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -456,14 +470,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#middleware_1" class="md-nav__link">
+  <a href="#middleware" class="md-nav__link">
     Middleware маршрутизации
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#middleware_2" class="md-nav__link">
+  <a href="#middleware_1" class="md-nav__link">
     Параметры middleware
   </a>
   
@@ -477,14 +491,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#middleware_3" class="md-nav__link">
+  <a href="#middleware_2" class="md-nav__link">
     Создание middleware
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#middleware_4" class="md-nav__link">
+  <a href="#middleware_3" class="md-nav__link">
     Использование middleware
   </a>
   
@@ -505,7 +519,7 @@
                   
 
 
-<h1 id="middleware">Middleware</h1>
+<h1 id="middleware-masonite">Middleware Masonite</h1>
 <p>Middleware (промежуточное программное обеспечение) является чрезвычайно важным аспектом 
 веб-приложений, поскольку оно позволяет запускать важный код до или после каждого 
 запроса или определенных маршрутов. 
@@ -538,7 +552,7 @@
 </code></pre></div></p>
 <p>Middleware будет запускаться при каждом входящем запросе к приложению независимо от того, 
 был найден маршрут или нет.</p>
-<h2 id="middleware_1">Middleware маршрутизации</h2>
+<h2 id="middleware">Middleware маршрутизации</h2>
 <p>Middleware маршрута это словарь с произвольным именем в качестве ключа и списком middleware. 
 Это сделано для того, чтобы мы могли указать middleware на основе ключа в нашем файле маршрутов.</p>
 <p>В файле <code>Kernel.py</code> это может выглядеть примерно так:
@@ -557,7 +571,7 @@
 <a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="p">}</span>
 </code></pre></div>
 По умолчанию все маршруты внутри файла <code>web.py</code> будут забирать список по ключу <code>web</code>.</p>
-<h2 id="middleware_2">Параметры middleware</h2>
+<h2 id="middleware_1">Параметры middleware</h2>
 <p>Вы можете передавать параметры из ваших маршрутов в middleware в тех случаях, когда middleware 
 должно работать по-разному в зависимости от вашего маршрута.</p>
 <p>Сделать это можно с помощью двоеточия <code>:</code> рядом с именем middleware вашего маршрута, 
@@ -584,7 +598,7 @@
 </code></pre></div>
 Если перейти по адресу, <code>/dashboard/152/settings</code>, то значение <strong>152</strong> будет передано 
 в методы middleware <code>before</code> и <code>after</code>.</p>
-<h2 id="middleware_3">Создание middleware</h2>
+<h2 id="middleware_2">Создание middleware</h2>
 <p>Middleware:</p>
 <ul>
 <li>Может находиться где угодно в вашем проекте.</li>
@@ -613,7 +627,7 @@
 </div>
 <p>Вот и все! Если бы мы хотели, чтобы это выполнялось после запроса, мы могли бы 
 использовать точно такую же логику в методе <code>after</code>.</p>
-<h2 id="middleware_4">Использование middleware</h2>
+<h2 id="middleware_3">Использование middleware</h2>
 <p>Если мы используем middleware для маршрута, нам нужно указать, какой маршрут должен выполнять 
 middleware. Просто добавите метод <code>.middleware()</code> к маршрутам. Это будет выглядеть примерно так:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">Route</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/dashboard&#39;</span><span class="p">,</span> <span class="s1">&#39;DashboardController@show&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;dashboard&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">middleware</span><span class="p">(</span><span class="s1">&#39;auth&#39;</span><span class="p">)</span>

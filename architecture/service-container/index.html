@@ -1,0 +1,1282 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
+    
+    
+      
+        <title>Service Container - Документация Masonite</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="red">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#service-container" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Документация Masonite" class="md-header__button md-logo" aria-label="Документация Masonite" data-md-component="logo">
+      
+  <img src="../../assets/masonite.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Документация Masonite
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Service Container
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="red"  aria-label="Выключить свет"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Выключить свет" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="yellow"  aria-label="Включить свет"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Включить свет" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Документация Masonite" class="md-nav__button md-logo" aria-label="Документация Masonite" data-md-component="logo">
+      
+  <img src="../../assets/masonite.png" alt="logo">
+
+    </a>
+    Документация Masonite
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Введение и установка
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Примеры
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Примеры" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Примеры
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          ToDo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="ToDo" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          ToDo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/todo/installation/" class="md-nav__link">
+        Установка
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/todo/structure_masonite/" class="md-nav__link">
+        Структура проекта
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/todo/database_architecture/" class="md-nav__link">
+        Работа с базой данных
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/todo/category/" class="md-nav__link">
+        Категории
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/todo/task/" class="md-nav__link">
+        Задачи
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Основное
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Основное" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Основное
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/routing/" class="md-nav__link">
+        Маршрутизация (Route)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/controllers/" class="md-nav__link">
+        Контроллеры (Controllers)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/middleware/" class="md-nav__link">
+        Middleware
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/response/" class="md-nav__link">
+        Response
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/request/" class="md-nav__link">
+        Request
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/static_files/" class="md-nav__link">
+        Статические файлы
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/view/" class="md-nav__link">
+        Представления (View)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/environments/" class="md-nav__link">
+        Environments
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/configuration/" class="md-nav__link">
+        Конфигурация
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/error_handling/" class="md-nav__link">
+        Обработка ошибок
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Архитектура
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Архитектура" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Архитектура
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Service Container
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Service Container
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание раздела">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    Начало
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bind" class="md-nav__link">
+    Bind
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-binding" class="md-nav__link">
+    Simple Binding
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make" class="md-nav__link">
+    Make
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#singleton" class="md-nav__link">
+    Singleton
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#has" class="md-nav__link">
+    Has
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collecting" class="md-nav__link">
+    Collecting (Группировка)
+  </a>
+  
+    <nav class="md-nav" aria-label="Collecting (Группировка)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#collect-by-key" class="md-nav__link">
+    Collect by Key (Группировка по ключу)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collecting-by-object" class="md-nav__link">
+    Collecting By Object (Группировка по объекту)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolve" class="md-nav__link">
+    Resolve (Определение)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolving-instances" class="md-nav__link">
+    Resolving Instances (Определение сущностей)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolving-your-own-code" class="md-nav__link">
+    Resolving your own code (Определение вашего собственного кода)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolving-with-additional-parameters" class="md-nav__link">
+    Resolving With Additional Parameters (Определение с дополнительными параметрами)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-container-outside-of-masonite-flow-masonite" class="md-nav__link">
+    Using the container outside of Masonite flow (Использование контейнера за пределами потока Masonite)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#container-swapping" class="md-nav__link">
+    Container Swapping (Замена контейнера)
+  </a>
+  
+    <nav class="md-nav" aria-label="Container Swapping (Замена контейнера)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-a-value" class="md-nav__link">
+    Using a value (Использование значения)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-a-callable" class="md-nav__link">
+    Using a callable (Использование вызываемого объекта)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#container-hooks" class="md-nav__link">
+    Container Hooks (Связи контейнера)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание раздела">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    Начало
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bind" class="md-nav__link">
+    Bind
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-binding" class="md-nav__link">
+    Simple Binding
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make" class="md-nav__link">
+    Make
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#singleton" class="md-nav__link">
+    Singleton
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#has" class="md-nav__link">
+    Has
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collecting" class="md-nav__link">
+    Collecting (Группировка)
+  </a>
+  
+    <nav class="md-nav" aria-label="Collecting (Группировка)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#collect-by-key" class="md-nav__link">
+    Collect by Key (Группировка по ключу)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collecting-by-object" class="md-nav__link">
+    Collecting By Object (Группировка по объекту)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolve" class="md-nav__link">
+    Resolve (Определение)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolving-instances" class="md-nav__link">
+    Resolving Instances (Определение сущностей)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolving-your-own-code" class="md-nav__link">
+    Resolving your own code (Определение вашего собственного кода)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolving-with-additional-parameters" class="md-nav__link">
+    Resolving With Additional Parameters (Определение с дополнительными параметрами)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-container-outside-of-masonite-flow-masonite" class="md-nav__link">
+    Using the container outside of Masonite flow (Использование контейнера за пределами потока Masonite)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#container-swapping" class="md-nav__link">
+    Container Swapping (Замена контейнера)
+  </a>
+  
+    <nav class="md-nav" aria-label="Container Swapping (Замена контейнера)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-a-value" class="md-nav__link">
+    Using a value (Использование значения)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-a-callable" class="md-nav__link">
+    Using a callable (Использование вызываемого объекта)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#container-hooks" class="md-nav__link">
+    Container Hooks (Связи контейнера)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="service-container">Service Container</h1>
+<p>Сервисный контейнер — чрезвычайно мощная функция Masonite и его следует использовать в максимально 
+широко. Важно понимать концепции Сервисного контейнера. Это простые концепции, которые, тем не менее, 
+могут показаться волшебными, если вы не понимаете, что происходит под капотом.</p>
+<h2 id="_1">Начало</h2>
+<p>Сервисный контейнер — это просто словарь, в который записаны классы в виде пар ключ-значение. 
+Затем они могут быть извлечены либо по ключу, либо по значению через определяемые объекты.</p>
+<p>Думайте об "определяемых объектах" в соответствии с утверждением Masonite: 
+"Что нужно вашему объекту? Ок, они есть в этом словаре, позвольте мне достать их для вас".</p>
+<p>Контейнер содержит все классы и возможности фреймворка, так что добавление функционала в Masonite 
+только добавляет классы в контейнер для использования разработчиком позже. Обычно это означает 
+"регистрация" этих классов в контейнере (подробнее об этом позже). Это позволяет Masonite быть модульным.</p>
+<p>Некоторые объекты определены в контейнере по умолчанию. К ним относятся ваши методы контроллера 
+(которые встречаются наиболее часто и вы, вероятно, использовали их ранее), конструкторы драйверов и 
+middleware. И любые другие классы которые указаны в документации.</p>
+<p>Есть 3 метода, которые важны во взаимодействии с контейнером: <code>bind</code>, <code>make</code> и <code>resolve</code>. </p>
+<h2 id="bind">Bind</h2>
+<p>Для связывания классов внутри контейнера следует использовать метод <code>bind</code> в нашем приложении. 
+В service provider это будет выглядеть следующим образом:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">masonite.provider</span> <span class="kn">import</span> <span class="n">ServiceProvider</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">from</span> <span class="nn">app.User</span> <span class="kn">import</span> <span class="n">User</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">class</span> <span class="nc">UserModelProvider</span><span class="p">(</span><span class="n">ServiceProvider</span><span class="p">):</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="k">def</span> <span class="nf">register</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">application</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s1">&#39;User&#39;</span><span class="p">,</span> <span class="n">User</span><span class="p">)</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="k">def</span> <span class="nf">boot</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        <span class="k">pass</span>
+</code></pre></div></p>
+<p>Это загрузит пары ключ - значение в словарь providers в контейнере. После этого вызова словарь будет 
+выглядеть так:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&gt;&gt;&gt; app.providers
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>{&#39;User&#39;: &lt;class app.User.User&gt;}
+</code></pre></div></p>
+<p>Сервисный контейнер доступен в объекте Request и может быть получен так:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">):</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="n">request</span><span class="o">.</span><span class="n">app</span><span class="p">()</span> <span class="c1"># вернет service container</span>
+</code></pre></div></p>
+<h2 id="simple-binding">Simple Binding</h2>
+<p>Иногда не важно, какой ключ у объекта, который вы связываете. Например, вы можете привязать класс 
+Markdown к контейнеру, но на самом деле все равно, как называется связанный ключ. 
+Это отличная причина использовать простую привязку, которая установит ключ как объект класса:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span> <span class="nn">masonite.provider</span> <span class="kn">import</span> <span class="n">ServiceProvider</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kn">from</span> <span class="nn">app.User</span> <span class="kn">import</span> <span class="n">User</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="k">class</span> <span class="nc">UserModelProvider</span><span class="p">(</span><span class="n">ServiceProvider</span><span class="p">):</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="k">def</span> <span class="nf">register</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">application</span><span class="o">.</span><span class="n">simple</span><span class="p">(</span><span class="n">User</span><span class="p">)</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    <span class="k">def</span> <span class="nf">boot</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>        <span class="k">pass</span>
+</code></pre></div></p>
+<h2 id="make">Make</h2>
+<p>Для того чтобы получить класс из сервисного контейнера, мы можем просто использовать метод make.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&gt;&gt;&gt; from app.User import User
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>&gt;&gt;&gt; app.bind(&#39;User&#39;, User)
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>&gt;&gt;&gt; app.make(&#39;User&#39;)
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>&lt;class app.User.User&gt;
+</code></pre></div>
+Вот оно! Это полезно в качестве IOC (инверсия управления) контейнера, который вы можете 
+загрузить отдельным классом в контейнер и потом использовать его повсюду в вашем проекте. </p>
+<h2 id="singleton">Singleton</h2>
+<p>Вы можете привязывать singleton к контейнеру. Это определит объект во время привязки. 
+Это позволит использовать один и тот же объект на протяжении всего срока службы контейнера.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">masonite.provider</span> <span class="kn">import</span> <span class="n">ServiceProvider</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kn">from</span> <span class="nn">app.helpers</span> <span class="kn">import</span> <span class="n">SomeClass</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="k">class</span> <span class="nc">UserModelProvider</span><span class="p">(</span><span class="n">ServiceProvider</span><span class="p">):</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    <span class="k">def</span> <span class="nf">register</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">application</span><span class="o">.</span><span class="n">singleton</span><span class="p">(</span><span class="s1">&#39;SomeClass&#39;</span><span class="p">,</span> <span class="n">SomeClass</span><span class="p">)</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    <span class="k">def</span> <span class="nf">boot</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>        <span class="k">pass</span>
+</code></pre></div></p>
+<h2 id="has">Has</h2>
+<p>Вы можете также проверить, существует ли ключ в контейнере, используя метод <code>.has()</code>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">app</span><span class="o">.</span><span class="n">has</span><span class="p">(</span><span class="s1">&#39;request&#39;</span><span class="p">)</span>
+</code></pre></div>
+Вы можете также проверить, существует ли ключ в контейнере, используя ключевое слово <code>in</code>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="s1">&#39;request&#39;</span> <span class="ow">in</span> <span class="n">app</span>
+</code></pre></div></p>
+<h2 id="collecting">Collecting (Группировка)</h2>
+<p>Вам может понадобиться собрать специфический набор объектов из контейнера по какому-то ключу. 
+Например, могут понадобиться все объекты, которые начинаются с "Exception" и заканчиваются "Hook". 
+Или все ключи, которые заканчиваются на "ExceptionHook", если мы создаём обработчик исключений.</p>
+<h3 id="collect-by-key">Collect by Key (Группировка по ключу)</h3>
+<p>Мы можем легко собрать все объекты по ключу:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">app</span><span class="o">.</span><span class="n">collect</span><span class="p">(</span><span class="s1">&#39;*ExceptionHook&#39;</span><span class="p">)</span>
+</code></pre></div>
+Это вернет словарь всех объектов, связаные с контейнером, которые начинаются с чего угодно и 
+заканчиваются на "ExceptionHook", такие как "SentryExceptionHook" или "AwesomeExceptionHook".</p>
+<p>Мы также можем сделать противоположное и собрать все объекты, которые начинаются со специфического ключа.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">app</span><span class="o">.</span><span class="n">collect</span><span class="p">(</span><span class="s1">&#39;Sentry*&#39;</span><span class="p">)</span>
+</code></pre></div>
+Будт собраны все ключи, которые начинаются с "Sentry", такие как "SentryWebhook" или 
+"SentryExceptionHandler".</p>
+<p>Наконец, мы можем собрать объекты, которые начинаются с "Sentry" заканчиваются на "Hook".
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">app</span><span class="o">.</span><span class="n">collect</span><span class="p">(</span><span class="s1">&#39;Sentry*Hook&#39;</span><span class="p">)</span>
+</code></pre></div>
+Мы получим такие ключи как "SentryExceptionHook" и "SentryHandlerHook"</p>
+<h2 id="collecting-by-object">Collecting By Object (Группировка по объекту)</h2>
+<p>Вы можете также собрать все подклассы объекта или если хотите собрать все сущности специфического
+ класса из контейнера.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">from</span> <span class="nn">cleo</span> <span class="kn">import</span> <span class="n">Command</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="o">...</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="n">app</span><span class="o">.</span><span class="n">collect</span><span class="p">(</span><span class="n">Command</span><span class="p">)</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="c1"># Returns {&#39;FirstCommand&#39;: &lt;class ...&gt;, &#39;AnotherCommand&#39;: ...}</span>
+</code></pre></div></p>
+<h2 id="resolve">Resolve (Определение)</h2>
+<p>Это наиболее мощная часть контейнера. Можно получить объекты из контейнера просто передав их в список 
+параметров любого объекта. Некоторые области Masonite определены, такие как, методы контроллера, middleware и 
+drivers.</p>
+<p>Например, мы хотим получить класс Request и поместить его в наш контроллер. Все методы контроллера 
+определены контейнером.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">):</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="p">()</span>
+</code></pre></div>
+В этом примере, перед тем как показать что метод вызван, Masonite посмотрит на параметры и посмотрит 
+внутрь контейнера в поисках объекта Request.</p>
+<p>Masonite будет знать, что вы пытаетесь получить класс Request и фактически извлечёт этот класс из 
+контейнера. Masonite найдет класс Request несмотря на то, какой ключ в контейнере, вернёт его, и 
+поместит их в метод контроллера. Эффективное создание IOC контейнера с dependency injection. 
+Думайте об этом как о <strong>get by value</strong> или <strong>get by key</strong> в примерах ранее. </p>
+<p>Очень мощная штука, да?</p>
+<p>Masonite также будет определять ваш пользовательский, <strong>специфичный для приложения класс, включая те, 
+которые вы явно не связываете с помощью <code>app.bind()</code></strong></p>
+<p>Продолжая пример выше, следующее будет работать из коробки (при условии, что соответствующие классы 
+существуют), без необходимости связывать пользовательские классы в контейнере:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># в другом месте...</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="k">class</span> <span class="nc">MyService</span><span class="p">:</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">some_other_dependency</span><span class="p">:</span> <span class="n">SomeOtherClass</span><span class="p">):</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>        <span class="k">pass</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>    <span class="k">def</span> <span class="nf">do_something</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>        <span class="k">pass</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="c1"># в контроллере...</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">,</span> <span class="n">service</span><span class="p">:</span> <span class="n">MyService</span><span class="p">):</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>    <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="p">()</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>    <span class="n">service</span><span class="o">.</span><span class="n">do_something</span><span class="p">()</span>
+</code></pre></div></p>
+<h2 id="resolving-instances">Resolving Instances (Определение сущностей)</h2>
+<p>Следующая мощная особенность контейнера заключается в том, что он может фактически вернуть сущности 
+классов, которые вы упоминаете. Например, все драйверы <code>Upload</code> наследуются от <code>UploadContract</code>, 
+который работает как интерфейс для всех <code>Upload</code> драйверов. Множество парадигм программирования 
+утверждают, что разработчики должны создавать интерфейс, а не реализацию, так что Masonite позволяет 
+возвращать сущности классов для этого специфического случая использования.</p>
+<p>Держите пример:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kn">from</span> <span class="nn">masonite.contracts</span> <span class="kn">import</span> <span class="n">UploadContract</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">upload</span><span class="p">:</span> <span class="n">UploadContract</span><span class="p">)</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>    <span class="n">upload</span> <span class="c1"># &lt;class masonite.drivers.UploadDiskDriver&gt;</span>
+</code></pre></div></p>
+<p>Обратите внимание, что мы передали контракт вместо класса Upload. </p>
+<h2 id="resolving-your-own-code">Resolving your own code (Определение вашего собственного кода)</h2>
+<p>Сервисный контейнер также может быть использован вне потока Masonite. Masonite принимает функцию или метод класса, и определяет их зависимости путём нахождения их в сервисном контейнере и внедряя их для вас.</p>
+<p>Благодаря этому, вы можете определить любой собственный класс или функцию.</p>
+<p><em>from masonite.request import Request</em></p>
+<p><em>from masonite.view import View</em></p>
+<p><em>def randomFunction(view: View):</em></p>
+<p><code></code><em>print(view)</em></p>
+<p><em>def show(self, request: Request):</em></p>
+<p><code></code><em>request.app().resolve(randomFunction) # Will print the View object</em></p>
+<p>Помните, что вам не следует вызывать его, а только сослаться на функцию. Сервисный контейнер должен внедрять зависимости в объект, поэтому он требует ссылку а не вызов.</p>
+<p>Это позволит получить все параметры randomFunction и извлечь их из сервисного контейнера. Возможно, вам нечасто придётся регистрировать ваш собственный код, но такая возможность имеется.</p>
+<h2 id="resolving-with-additional-parameters">Resolving With Additional Parameters (Определение с дополнительными параметрами)</h2>
+<p>Иногда может понадобиться определить ваш код в дополнение к передаче переменных в том же списке параметров. Например, если вам нужно 3 параметра наподобие этих:</p>
+<p><em>from masonite.request import Request</em></p>
+<p><em>from masonite import Mail</em></p>
+<p><em>def send_email(request: Request, mail: Mail, email):</em></p>
+<p><code></code><em>pass</em></p>
+<p>Вы можете зарегистрировать и передать параметр одновременно, добавив их в resolve() метод:</p>
+<p><em>app.resolve(send_email, 'user@email.com')</em></p>
+<p>Masonite просматривает каждый список параметров и определяет их, а если он не находит параметр, он получит его из других указанных параметров. Эти параметры могут идти в любом порядке.</p>
+<h2 id="using-the-container-outside-of-masonite-flow-masonite">Using the container outside of Masonite flow (Использование контейнера за пределами потока Masonite)</h2>
+<p>Если вам нужно использовать контейнер за пределами нормального потока Masonite, например внутри команды, вы можете импортировать контейнер напрямую.</p>
+<p>Это будет выглядеть следующим образом:</p>
+<p><em>from wsgi import container</em></p>
+<p><em>from masonite import Queue</em></p>
+<p><em>class SomeCommand:</em></p>
+<p><code></code><em>def handle(self):</em></p>
+<p><code></code><em>queue = container.make(Queue)</em></p>
+<p><code></code><em>queue.push(..)</em></p>
+<h2 id="container-swapping">Container Swapping (Замена контейнера)</h2>
+<p>Иногда, когда вы регистрируете объект или класс, вы хотите, чтобы возвращалось другое значение.</p>
+<h3 id="using-a-value">Using a value (Использование значения)</h3>
+<p>Мы можем передать простое значение как второй параметр в swap метод, который будет возвращён вместо определяемого объекта. Например, это используется сейчас для определения класса Mail следующим образом:</p>
+<p><em>from masonite import Mail</em></p>
+<p><em>def show(self, mail: Mail):</em></p>
+<p><code></code><em>mail #== <masonite.drivers.MailSmtpDriver></em></p>
+<p>Но определение класса для класса Mail здесь выглядит так:</p>
+<p><em>class Mail:</em></p>
+<p><code></code><em>pass</em></p>
+<p>Откуда он знает, что вместо этого нужно зарегистрировать smpt драйвер? Это происходит, потому что добавлен swap контейнера. Swap контейнера работает просто - он может взять объект как первый параметр и либо значение, либо вызываемый объект в качестве второго.</p>
+<p>Например, чтобы сымитировать вышеуказанную функциональность, выполним что-то вроде этого в методе загрузки в Service Provider:</p>
+<p><em>from masonite import Mail</em></p>
+<p><em>def boot(self, mail: MailManager):</em></p>
+<p><code></code><em>self.application.swap(Mail, manager.driver(self.application.make('MailConfig').DRIVER))</em></p>
+<p>Обратите внимание, что мы указали класс, который должен быть возвращён каждый раз, когда мы определяем класс Mail. В этом случае мы хотим разрешить драйвер по умолчанию, определённый в конфигурации проекта.</p>
+<h3 id="using-a-callable">Using a callable (Использование вызываемого объекта)</h3>
+<p>Вместо прямой передачи значения как второго параметра мы можем вместо этого передать вызываемый объект. Вызываемый объект ДОЛЖЕН получить 2 параметра. Первым параметром будет аннотация, которую мы пытаемся определить, а вторым параметром будет сам контейнер. Вот пример, как вышеизложенное будет работать с вызываемым объектом:</p>
+<p><em>from masonite import Mail</em></p>
+<p><em>from somewhere import NewObject</em></p>
+<p><em>...</em></p>
+<p><em>def mail_callback(obj, container):</em></p>
+<p><code></code><em>return NewObject</em></p>
+<p><em>...</em></p>
+<p><em>def boot(self):</em></p>
+<p><code></code><em>self.application.swap(Mail, mail_callback)</em></p>
+<p>Обратите внимание, что вторым параметром является вызываемый объект. Это значит, что он будет вызван 
+каждый раз, когда мы пытаемся определить класс Mail.</p>
+<p>Запомните: если второй параметр это вызываемый объект, он будет вызван. Если это значение, оно будет 
+просто возращено вместо определяемого объекта.</p>
+<h2 id="container-hooks">Container Hooks (Связи контейнера)</h2>
+<p>Иногда нам хочется запустить код, когда что-то происходит внутри нашего контейнера. Например, мы хотим 
+запустить некоторую произвольную функцию для определения  объекта Request из контейнера или мы хотим 
+привязать некоторые значения к классу View всякий раз, когда мы связываем Response с контейнером. 
+Это отлично подходит для тестирования, если мы хотим привязать пользовательский объект к запросу 
+каждый раз, когда он определяется. </p>
+<p>У нас есть три варианта: on_bind, on_make, on_resolve. Все, что нам нужно для первого варианта это 
+ключ или объект, к которому мы хотим привязаться, и второй вариант будет функцией, которая принимает 
+два аргумента. Первый аргумент это объект в вопросе, а второй аргумент это весь контейнер.</p>
+<p>Код может выглядеть следующим образом:</p>
+<p><em>from masonite.request import Request</em></p>
+<p><em>def attribute_on_make(request_obj, container):</em></p>
+<p><code></code><em>request_obj.attribute = 'some value'</em></p>
+<p><em>...</em></p>
+<p><em>container = App()</em></p>
+<p><em># sets the hook</em></p>
+<p><em>container.on_make('request', attribute_on_make)</em></p>
+<p><em>container.bind('request', Request)</em></p>
+<p><em># runs the attribute_on_make function</em></p>
+<p><em>request = container.make('request')</em></p>
+<p><em>request.attribute # 'some value'</em></p>
+<p>Заметим, что мы создаём функцию, которая принимает 2 значения, объект, с которым мы работаем, и контейнер. Каждый раз, когда мы запускаем on_make, функция запускается. </p>
+<p>Мы также можем привязываться к конкретным объектам вместо ключей:</p>
+<p><em>from masonite.request import Request</em></p>
+<p><em># ...</em></p>
+<p><em># sets the hook</em></p>
+<p><em>container.on_make(Request, attribute_on_make)</em></p>
+<p><em>container.bind('request', Request)</em></p>
+<p><em># runs the attribute_on_make function</em></p>
+<p><em>request = container.make('request')</em></p>
+<p><em>request.attribute # 'some value'</em></p>
+<p>После этого он вызывает тот же атрибут, но каждый раз объект Request сам создаётся из контейнера. Заметьте, что все идентично, кроме строки 6, где мы используем объект вместо строки. </p>
+<p>Мы можем делать то же самое с другими вариантами:</p>
+<p><em>container.on_bind(Request, attribute_on_make)</em></p>
+<p><em>container.on_make(Request, attribute_on_make)</em></p>
+<p><em>container.on_resolve(Request, attribute_on_make)</em></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
+      
+        
+        <a href="../../basics/error_handling/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Обработка ошибок" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Назад
+              </span>
+              Обработка ошибок
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/MasoniteFramework/masonite" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://t.me/masonite_channel" target="_blank" rel="noopener" title="t.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M248 8C111.033 8 0 119.033 0 256s111.033 248 248 248 248-111.033 248-248S384.967 8 248 8Zm114.952 168.66c-3.732 39.215-19.881 134.378-28.1 178.3-3.476 18.584-10.322 24.816-16.948 25.425-14.4 1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25 5.342-39.5 3.652-3.793 67.107-61.51 68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608 69.142-14.845 10.194-26.894 9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7 18.45-13.7 108.446-47.248 144.628-62.3c68.872-28.647 83.183-33.623 92.511-33.789 2.052-.034 6.639.474 9.61 2.885a10.452 10.452 0 0 1 3.53 6.716 43.765 43.765 0 0 1 .417 9.769Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.config.lang": "ru", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\u041f\u043e\u0438\u0441\u043a", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version.title": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.8492ddcf.min.js"></script>
+      
+    
+  </body>
+</html>

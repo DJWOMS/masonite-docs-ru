@@ -1,0 +1,1876 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
+    
+    
+      
+        <title>Задачи - Документация Masonite</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="red">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../../.." title="Документация Masonite" class="md-header__button md-logo" aria-label="Документация Masonite" data-md-component="logo">
+      
+  <img src="../../../assets/masonite.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Документация Masonite
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Задачи
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="red"  aria-label="Выключить свет"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Выключить свет" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="yellow"  aria-label="Включить свет"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Включить свет" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Документация Masonite" class="md-nav__button md-logo" aria-label="Документация Masonite" data-md-component="logo">
+      
+  <img src="../../../assets/masonite.png" alt="logo">
+
+    </a>
+    Документация Masonite
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Введение и установка
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Примеры
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Примеры" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Примеры
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          ToDo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="ToDo" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          ToDo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        Установка
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structure_masonite/" class="md-nav__link">
+        Структура проекта
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../database_architecture/" class="md-nav__link">
+        Работа с базой данных
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/" class="md-nav__link">
+        Категории
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Задачи
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Задачи
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание раздела">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Контроллер задач
+  </a>
+  
+    <nav class="md-nav" aria-label="Контроллер задач">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Импорт
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    Маршруты для задач
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    Создание и вывод списка задач
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    Шаблон списка задач
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    Шаблон создания задачи
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    Проверяем работу
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    Вывод, редактирование и удаление задачи
+  </a>
+  
+    <nav class="md-nav" aria-label="Вывод, редактирование и удаление задачи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    Контроллер
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    Шаблон
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    Проверим работу
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    Итог
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Основное
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Основное" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Основное
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../basics/routing/" class="md-nav__link">
+        Маршрутизация (Route)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../basics/controllers/" class="md-nav__link">
+        Контроллеры (Controllers)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../basics/middleware/" class="md-nav__link">
+        Middleware
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../basics/response/" class="md-nav__link">
+        Response
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../basics/request/" class="md-nav__link">
+        Request
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../basics/static_files/" class="md-nav__link">
+        Статические файлы
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../basics/view/" class="md-nav__link">
+        Представления (View)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../basics/environments/" class="md-nav__link">
+        Environments
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../basics/configuration/" class="md-nav__link">
+        Конфигурация
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../basics/error_handling/" class="md-nav__link">
+        Обработка ошибок
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Архитектура
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Архитектура" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Архитектура
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../architecture/service-container/" class="md-nav__link">
+        Service Container
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание раздела">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Контроллер задач
+  </a>
+  
+    <nav class="md-nav" aria-label="Контроллер задач">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Импорт
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    Маршруты для задач
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    Создание и вывод списка задач
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    Шаблон списка задач
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    Шаблон создания задачи
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    Проверяем работу
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    Вывод, редактирование и удаление задачи
+  </a>
+  
+    <nav class="md-nav" aria-label="Вывод, редактирование и удаление задачи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    Контроллер
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    Шаблон
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    Проверим работу
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    Итог
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">Задачи</h1>
+<p>Для начала нам нужно создать контроллер для задач. Создадим контроллер сразу с нужными методами, для
+этого нужно использовать флаг <code>-r</code>.</p>
+<p>Выполните команду:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python craft controller Task -r
+</code></pre></div></p>
+<h3 id="_2">Контроллер задач</h3>
+<p>Откройте файл <code>app/controllers/TaskController.py</code>.</p>
+<p>Все нужные нам методы уже присутствуют, это великолепно.
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">app/controllers/TaskController.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span>
+<span class="normal"><a href="#__codelineno-1-21">21</a></span>
+<span class="normal"><a href="#__codelineno-1-22">22</a></span>
+<span class="normal"><a href="#__codelineno-1-23">23</a></span>
+<span class="normal"><a href="#__codelineno-1-24">24</a></span>
+<span class="normal"><a href="#__codelineno-1-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">masonite.controllers</span> <span class="kn">import</span> <span class="n">Controller</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kn">from</span> <span class="nn">masonite.views</span> <span class="kn">import</span> <span class="n">View</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="k">class</span> <span class="nc">TaskController</span><span class="p">(</span><span class="n">Controller</span><span class="p">):</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>    <span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">view</span><span class="p">:</span> <span class="n">View</span><span class="p">):</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>        <span class="k">return</span> <span class="n">view</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">view</span><span class="p">:</span> <span class="n">View</span><span class="p">):</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>        <span class="k">return</span> <span class="n">view</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>    <span class="k">def</span> <span class="nf">store</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">view</span><span class="p">:</span> <span class="n">View</span><span class="p">):</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>        <span class="k">return</span> <span class="n">view</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a>    <span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">view</span><span class="p">:</span> <span class="n">View</span><span class="p">):</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a>        <span class="k">return</span> <span class="n">view</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a>    <span class="k">def</span> <span class="nf">edit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">view</span><span class="p">:</span> <span class="n">View</span><span class="p">):</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a>        <span class="k">return</span> <span class="n">view</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a>
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a>    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">view</span><span class="p">:</span> <span class="n">View</span><span class="p">):</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22"></a>        <span class="k">return</span> <span class="n">view</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a>
+<a id="__codelineno-1-24" name="__codelineno-1-24"></a>    <span class="k">def</span> <span class="nf">destroy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">view</span><span class="p">:</span> <span class="n">View</span><span class="p">):</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25"></a>        <span class="k">return</span> <span class="n">view</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+<h4 id="_3">Импорт</h4>
+<p>Сразу добавим нужные нам импорты. Импортируем классы <code>Request</code>, <code>Response</code> и модели <code>Category</code>, <code>Task</code>.
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">app/controllers/TaskController.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">masonite.controllers</span> <span class="kn">import</span> <span class="n">Controller</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="hll"><span class="kn">from</span> <span class="nn">masonite.request</span> <span class="kn">import</span> <span class="n">Request</span>
+</span><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="hll"><span class="kn">from</span> <span class="nn">masonite.response</span> <span class="kn">import</span> <span class="n">Response</span>
+</span><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="kn">from</span> <span class="nn">masonite.views</span> <span class="kn">import</span> <span class="n">View</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="hll"><span class="kn">from</span> <span class="nn">app.models.Category</span> <span class="kn">import</span> <span class="n">Category</span>
+</span><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="hll"><span class="kn">from</span> <span class="nn">app.models.Task</span> <span class="kn">import</span> <span class="n">Task</span>
+</span><a id="__codelineno-2-8" name="__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="k">class</span> <span class="nc">TaskController</span><span class="p">(</span><span class="n">Controller</span><span class="p">):</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a>    <span class="o">...</span>
+</code></pre></div></td></tr></table></div></p>
+<p>Перед тем как писать логику в контроллере добавим маршруты в <code>ROUTES</code>.</p>
+<h3 id="_4">Маршруты для задач</h3>
+<p>Группы маршрутов — отличный способ сгруппировать вместе несколько маршрутов с одинаковыми параметрами, 
+такими как префикс или с одним и тем же middleware. </p>
+<p>В файл <code>routes/web.py</code> добавим следующий код:
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">routes/web.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span>
+<span class="normal"><a href="#__codelineno-3-20">20</a></span>
+<span class="normal"><a href="#__codelineno-3-21">21</a></span>
+<span class="normal"><a href="#__codelineno-3-22">22</a></span>
+<span class="normal"><a href="#__codelineno-3-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kn">from</span> <span class="nn">masonite.routes</span> <span class="kn">import</span> <span class="n">Route</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">ROUTES</span> <span class="o">=</span> <span class="p">[</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>    <span class="n">Route</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="s2">&quot;CategoryController@index&quot;</span><span class="p">),</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>    <span class="n">Route</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/create&quot;</span><span class="p">,</span> <span class="s2">&quot;CategoryController@create&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;category_create&#39;</span><span class="p">),</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>    <span class="n">Route</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/create&quot;</span><span class="p">,</span> <span class="s2">&quot;CategoryController@store&quot;</span><span class="p">),</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>    <span class="n">Route</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/single/@id&quot;</span><span class="p">,</span> <span class="s2">&quot;CategoryController@show&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s2">&quot;category_single&quot;</span><span class="p">),</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>    <span class="n">Route</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/update/@id&quot;</span><span class="p">,</span> <span class="s2">&quot;CategoryController@update&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s2">&quot;category_update&quot;</span><span class="p">),</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>    <span class="n">Route</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/delete/@id&quot;</span><span class="p">,</span> <span class="s2">&quot;CategoryController@destroy&quot;</span><span class="p">),</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="hll">    <span class="n">Route</span><span class="o">.</span><span class="n">group</span><span class="p">(</span>
+</span><a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="hll">        <span class="p">[</span>
+</span><a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="hll">            <span class="n">Route</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/create&quot;</span><span class="p">,</span> <span class="s2">&quot;TaskController@create&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s2">&quot;create&quot;</span><span class="p">),</span>
+</span><a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="hll">            <span class="n">Route</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/create&quot;</span><span class="p">,</span> <span class="s2">&quot;TaskController@store&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s2">&quot;store&quot;</span><span class="p">),</span>
+</span><a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="hll">            <span class="n">Route</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/single/@id&quot;</span><span class="p">,</span> <span class="s2">&quot;TaskController@show&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s2">&quot;single&quot;</span><span class="p">),</span>
+</span><a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="hll">            <span class="n">Route</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/update/@id&quot;</span><span class="p">,</span> <span class="s2">&quot;TaskController@update&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s2">&quot;update&quot;</span><span class="p">),</span>
+</span><a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="hll">            <span class="n">Route</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/delete/@id&quot;</span><span class="p">,</span> <span class="s2">&quot;TaskController@destroy&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s2">&quot;delete&quot;</span><span class="p">),</span>
+</span><a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="hll">            <span class="n">Route</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/@category_id&quot;</span><span class="p">,</span> <span class="s2">&quot;TaskController@index&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s2">&quot;list&quot;</span><span class="p">),</span>
+</span><a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="hll">        <span class="p">],</span>
+</span><a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="hll">        <span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;/task&quot;</span><span class="p">,</span>
+</span><a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="hll">        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;task.&quot;</span>
+</span><a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="hll">    <span class="p">)</span>
+</span><a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+Для объединения маршрутов в группу мы используем метод <code>group()</code>, который принимает список маршрутов 
+и параметры.</p>
+<p>В приведенном выше коде, имена маршрутов будут <code>task.list</code>, <code>task.create</code> и т.д. За это отвечает параметр
+<code>name</code>.</p>
+<p>URL-адрес будет виде <code>/task</code>, <code>/task/create</code>и т.д. За это отвечает параметр
+<code>prefix</code>.</p>
+<p>Более подробно о группах маршрутов можно посмотреть в 
+<a href="https://masonite.pro/basics/routing/">документации</a>.</p>
+<div class="admonition note warning">
+<p class="admonition-title">Параметр name</p>
+<p>Обратите внимание, если вы указали параметр <code>name</code>, то вам обязательно нужно для каждого маршрута
+в группе указать имя в методе <code>name()</code>.
+<strong>Иначе вы получите ошибку.</strong></p>
+</div>
+<h3 id="_5">Создание и вывод списка задач</h3>
+<p>Вернемся в файл <code>app/controllers/TaskController.py</code> и доработаем три метода, <code>index()</code>, <code>create()</code>, 
+<code>store()</code>.
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">app/controllers/TaskController.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span>
+<span class="normal"><a href="#__codelineno-4-17">17</a></span>
+<span class="normal"><a href="#__codelineno-4-18">18</a></span>
+<span class="normal"><a href="#__codelineno-4-19">19</a></span>
+<span class="normal"><a href="#__codelineno-4-20">20</a></span>
+<span class="normal"><a href="#__codelineno-4-21">21</a></span>
+<span class="normal"><a href="#__codelineno-4-22">22</a></span>
+<span class="normal"><a href="#__codelineno-4-23">23</a></span>
+<span class="normal"><a href="#__codelineno-4-24">24</a></span>
+<span class="normal"><a href="#__codelineno-4-25">25</a></span>
+<span class="normal"><a href="#__codelineno-4-26">26</a></span>
+<span class="normal"><a href="#__codelineno-4-27">27</a></span>
+<span class="normal"><a href="#__codelineno-4-28">28</a></span>
+<span class="normal"><a href="#__codelineno-4-29">29</a></span>
+<span class="normal"><a href="#__codelineno-4-30">30</a></span>
+<span class="normal"><a href="#__codelineno-4-31">31</a></span>
+<span class="normal"><a href="#__codelineno-4-32">32</a></span>
+<span class="normal"><a href="#__codelineno-4-33">33</a></span>
+<span class="normal"><a href="#__codelineno-4-34">34</a></span>
+<span class="normal"><a href="#__codelineno-4-35">35</a></span>
+<span class="normal"><a href="#__codelineno-4-36">36</a></span>
+<span class="normal"><a href="#__codelineno-4-37">37</a></span>
+<span class="normal"><a href="#__codelineno-4-38">38</a></span>
+<span class="normal"><a href="#__codelineno-4-39">39</a></span>
+<span class="normal"><a href="#__codelineno-4-40">40</a></span>
+<span class="normal"><a href="#__codelineno-4-41">41</a></span>
+<span class="normal"><a href="#__codelineno-4-42">42</a></span>
+<span class="normal"><a href="#__codelineno-4-43">43</a></span>
+<span class="normal"><a href="#__codelineno-4-44">44</a></span>
+<span class="normal"><a href="#__codelineno-4-45">45</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kn">from</span> <span class="nn">masonite.controllers</span> <span class="kn">import</span> <span class="n">Controller</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="kn">from</span> <span class="nn">masonite.request</span> <span class="kn">import</span> <span class="n">Request</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="kn">from</span> <span class="nn">masonite.response</span> <span class="kn">import</span> <span class="n">Response</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="kn">from</span> <span class="nn">masonite.views</span> <span class="kn">import</span> <span class="n">View</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="kn">from</span> <span class="nn">app.models.Category</span> <span class="kn">import</span> <span class="n">Category</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="kn">from</span> <span class="nn">app.models.Task</span> <span class="kn">import</span> <span class="n">Task</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="k">class</span> <span class="nc">TaskController</span><span class="p">(</span><span class="n">Controller</span><span class="p">):</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="hll">    <span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">view</span><span class="p">:</span> <span class="n">View</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">):</span>
+</span><a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="hll">        <span class="n">tasks</span> <span class="o">=</span> <span class="n">Task</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="s2">&quot;category_id&quot;</span><span class="p">,</span> <span class="n">request</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="s2">&quot;category_id&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+</span><a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="hll">        <span class="k">return</span> <span class="n">view</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s2">&quot;task.list&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;tasks&quot;</span><span class="p">:</span> <span class="n">tasks</span><span class="p">})</span>
+</span><a id="__codelineno-4-14" name="__codelineno-4-14"></a>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="hll">    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">view</span><span class="p">:</span> <span class="n">View</span><span class="p">):</span>
+</span><a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="hll">        <span class="n">categories</span> <span class="o">=</span> <span class="n">Category</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</span><a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="hll">        <span class="k">return</span> <span class="n">view</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s2">&quot;task.create&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;categories&quot;</span><span class="p">:</span> <span class="n">categories</span><span class="p">})</span>
+</span><a id="__codelineno-4-18" name="__codelineno-4-18"></a>
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="hll">    <span class="k">def</span> <span class="nf">store</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">,</span> <span class="n">response</span><span class="p">:</span> <span class="n">Response</span><span class="p">):</span>
+</span><a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="hll">        <span class="n">error</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">validate</span><span class="p">(</span>
+</span><a id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="hll">            <span class="p">{</span>
+</span><a id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="hll">                <span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;required&quot;</span><span class="p">,</span>
+</span><a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="hll">                <span class="s2">&quot;end_date&quot;</span><span class="p">:</span> <span class="s2">&quot;required&quot;</span><span class="p">,</span>
+</span><a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="hll">                <span class="s2">&quot;category_id&quot;</span><span class="p">:</span> <span class="s2">&quot;required&quot;</span>
+</span><a id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="hll">            <span class="p">}</span>
+</span><a id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="hll">        <span class="p">)</span>
+</span><a id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="hll">        <span class="k">if</span> <span class="n">error</span><span class="p">:</span>
+</span><a id="__codelineno-4-28" name="__codelineno-4-28"></a><span class="hll">            <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">redirect</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;task.create&quot;</span><span class="p">)</span>
+</span><a id="__codelineno-4-29" name="__codelineno-4-29"></a><span class="hll">
+</span><a id="__codelineno-4-30" name="__codelineno-4-30"></a><span class="hll">        <span class="n">Task</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="o">**</span><span class="n">request</span><span class="o">.</span><span class="n">only</span><span class="p">(</span><span class="s2">&quot;text&quot;</span><span class="p">,</span> <span class="s2">&quot;end_date&quot;</span><span class="p">,</span> <span class="s2">&quot;category_id&quot;</span><span class="p">))</span>
+</span><a id="__codelineno-4-31" name="__codelineno-4-31"></a><span class="hll">        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">redirect</span><span class="p">(</span>
+</span><a id="__codelineno-4-32" name="__codelineno-4-32"></a><span class="hll">            <span class="n">name</span><span class="o">=</span><span class="s2">&quot;task.list&quot;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;category_id&quot;</span><span class="p">:</span> <span class="n">request</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s2">&quot;category_id&quot;</span><span class="p">)}</span>
+</span><a id="__codelineno-4-33" name="__codelineno-4-33"></a><span class="hll">        <span class="p">)</span>
+</span><a id="__codelineno-4-34" name="__codelineno-4-34"></a>
+<a id="__codelineno-4-35" name="__codelineno-4-35"></a>    <span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">view</span><span class="p">:</span> <span class="n">View</span><span class="p">):</span>
+<a id="__codelineno-4-36" name="__codelineno-4-36"></a>        <span class="k">return</span> <span class="n">view</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-37" name="__codelineno-4-37"></a>
+<a id="__codelineno-4-38" name="__codelineno-4-38"></a>    <span class="k">def</span> <span class="nf">edit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">view</span><span class="p">:</span> <span class="n">View</span><span class="p">):</span>
+<a id="__codelineno-4-39" name="__codelineno-4-39"></a>        <span class="k">return</span> <span class="n">view</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-40" name="__codelineno-4-40"></a>
+<a id="__codelineno-4-41" name="__codelineno-4-41"></a>    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">view</span><span class="p">:</span> <span class="n">View</span><span class="p">):</span>
+<a id="__codelineno-4-42" name="__codelineno-4-42"></a>        <span class="k">return</span> <span class="n">view</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-43" name="__codelineno-4-43"></a>
+<a id="__codelineno-4-44" name="__codelineno-4-44"></a>    <span class="k">def</span> <span class="nf">destroy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">view</span><span class="p">:</span> <span class="n">View</span><span class="p">):</span>
+<a id="__codelineno-4-45" name="__codelineno-4-45"></a>        <span class="k">return</span> <span class="n">view</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+<p>В <code>index()</code> мы ищем все задачи по <code>id</code> категории, для этого используем метод <code>where()</code>. Обратите
+внимание, что вызван метод <code>get()</code>. Это нужно для того, чтобы получить <code>Collection</code>. Подробнее о
+<code>Collection</code> можно прочитать в <a href="https://orm.masoniteproject.com/collections">документации Masonite ORM</a></p>
+<p>В методе <code>create()</code> мы не просто рендерим страницу, но и передаем список всех категорий, чтобы можно
+было выбрать к какой категории привязать задачу.</p>
+<p>Наш метод <code>store()</code> похож на тот который мы уже писали для категорий, но есть отличия. Указано 
+несколько обязательных данных, такие как, <code>text</code>, <code>end_date</code>, <code>category_id</code>.</p>
+<p>Также обратите внимание на 30-ю строку. Здесь для получения данных мы используем метод <code>only()</code>.
+Он вернет только те данные, которые мы перечислили.</p>
+<p>Для редиректа пользователя на страницу со списком задач, в метод <code>redirect()</code> передаем имя маршрута и
+необходимые параметры.</p>
+<h3 id="_6">Шаблон списка задач</h3>
+<p>В директории <code>templates</code> создайте директорию <code>task</code>. </p>
+<p>Создайте файл <code>list.html</code> в <code>templates/task</code>. И добавьте в него код ниже.
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">templates/task/list.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span>
+<span class="normal"><a href="#__codelineno-5-16">16</a></span>
+<span class="normal"><a href="#__codelineno-5-17">17</a></span>
+<span class="normal"><a href="#__codelineno-5-18">18</a></span>
+<span class="normal"><a href="#__codelineno-5-19">19</a></span>
+<span class="normal"><a href="#__codelineno-5-20">20</a></span>
+<span class="normal"><a href="#__codelineno-5-21">21</a></span>
+<span class="normal"><a href="#__codelineno-5-22">22</a></span>
+<span class="normal"><a href="#__codelineno-5-23">23</a></span>
+<span class="normal"><a href="#__codelineno-5-24">24</a></span>
+<span class="normal"><a href="#__codelineno-5-25">25</a></span>
+<span class="normal"><a href="#__codelineno-5-26">26</a></span>
+<span class="normal"><a href="#__codelineno-5-27">27</a></span>
+<span class="normal"><a href="#__codelineno-5-28">28</a></span>
+<span class="normal"><a href="#__codelineno-5-29">29</a></span>
+<span class="normal"><a href="#__codelineno-5-30">30</a></span>
+<span class="normal"><a href="#__codelineno-5-31">31</a></span>
+<span class="normal"><a href="#__codelineno-5-32">32</a></span>
+<span class="normal"><a href="#__codelineno-5-33">33</a></span>
+<span class="normal"><a href="#__codelineno-5-34">34</a></span>
+<span class="normal"><a href="#__codelineno-5-35">35</a></span>
+<span class="normal"><a href="#__codelineno-5-36">36</a></span>
+<span class="normal"><a href="#__codelineno-5-37">37</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/static/style.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Категории<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a>  <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Список задач<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a>  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ route(&#39;task.create&#39;) }}&quot;</span><span class="p">&gt;</span>Создать задачу<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a>  @if tasks
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a>    @for task in tasks
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;list-item&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a>      <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a>          <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="s">            @if task.done == &#39;on&#39;</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="s">              done</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="s">            @else</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="s">              work</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="s">            @endif</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="s">            &quot;</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25"></a>          <span class="p">&gt;</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26"></a>          <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-5-27" name="__codelineno-5-27"></a>        <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Задача: {{task.text}} | <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-5-28" name="__codelineno-5-28"></a>        <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>выполнить до: {{task.end_date}}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-5-29" name="__codelineno-5-29"></a>      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-5-30" name="__codelineno-5-30"></a>      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ route(&#39;task.single&#39;, {&#39;id&#39;: task.id}) }}&quot;</span><span class="p">&gt;</span>Редактировать<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<a id="__codelineno-5-31" name="__codelineno-5-31"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-5-32" name="__codelineno-5-32"></a>    @endfor
+<a id="__codelineno-5-33" name="__codelineno-5-33"></a>  @endif
+<a id="__codelineno-5-34" name="__codelineno-5-34"></a>
+<a id="__codelineno-5-35" name="__codelineno-5-35"></a><span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+<a id="__codelineno-5-36" name="__codelineno-5-36"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-5-37" name="__codelineno-5-37"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+Разберем некоторые моменты более подробно.
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">templates/task/list.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span>
+<span class="normal"><a href="#__codelineno-6-16">16</a></span>
+<span class="normal"><a href="#__codelineno-6-17">17</a></span>
+<span class="normal"><a href="#__codelineno-6-18">18</a></span>
+<span class="normal"><a href="#__codelineno-6-19">19</a></span>
+<span class="normal"><a href="#__codelineno-6-20">20</a></span>
+<span class="normal"><a href="#__codelineno-6-21">21</a></span>
+<span class="normal"><a href="#__codelineno-6-22">22</a></span>
+<span class="normal"><a href="#__codelineno-6-23">23</a></span>
+<span class="normal"><a href="#__codelineno-6-24">24</a></span>
+<span class="normal"><a href="#__codelineno-6-25">25</a></span>
+<span class="normal"><a href="#__codelineno-6-26">26</a></span>
+<span class="normal"><a href="#__codelineno-6-27">27</a></span>
+<span class="normal"><a href="#__codelineno-6-28">28</a></span>
+<span class="normal"><a href="#__codelineno-6-29">29</a></span>
+<span class="normal"><a href="#__codelineno-6-30">30</a></span>
+<span class="normal"><a href="#__codelineno-6-31">31</a></span>
+<span class="normal"><a href="#__codelineno-6-32">32</a></span>
+<span class="normal"><a href="#__codelineno-6-33">33</a></span>
+<span class="normal"><a href="#__codelineno-6-34">34</a></span>
+<span class="normal"><a href="#__codelineno-6-35">35</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/static/style.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Категории<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a>  <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Список задач<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="hll">  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ route(&#39;task.create&#39;) }}&quot;</span><span class="p">&gt;</span>Создать задачу<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span><a id="__codelineno-6-13" name="__codelineno-6-13"></a>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a>    @for task in tasks
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;list-item&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a>      <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="hll">          <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;</span>
+</span><a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="hll"><span class="s">            @if task.done == &#39;on&#39;</span>
+</span><a id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="hll"><span class="s">              done</span>
+</span><a id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="hll"><span class="s">            @else</span>
+</span><a id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="hll"><span class="s">              work</span>
+</span><a id="__codelineno-6-22" name="__codelineno-6-22"></a><span class="hll"><span class="s">            @endif</span>
+</span><a id="__codelineno-6-23" name="__codelineno-6-23"></a><span class="hll"><span class="s">            &quot;</span>
+</span><a id="__codelineno-6-24" name="__codelineno-6-24"></a><span class="hll">          <span class="p">&gt;</span>
+</span><a id="__codelineno-6-25" name="__codelineno-6-25"></a>          <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-6-26" name="__codelineno-6-26"></a>        <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Задача: {{task.text}} | <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-6-27" name="__codelineno-6-27"></a>        <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>выполнить до: {{task.end_date}}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-6-28" name="__codelineno-6-28"></a>      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-6-29" name="__codelineno-6-29"></a><span class="hll">      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ route(&#39;task.single&#39;, {&#39;id&#39;: task.id}) }}&quot;</span><span class="p">&gt;</span>Редактировать<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span><a id="__codelineno-6-30" name="__codelineno-6-30"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-6-31" name="__codelineno-6-31"></a>    @endfor
+<a id="__codelineno-6-32" name="__codelineno-6-32"></a>
+<a id="__codelineno-6-33" name="__codelineno-6-33"></a><span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+<a id="__codelineno-6-34" name="__codelineno-6-34"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-6-35" name="__codelineno-6-35"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+Обратите внимание на выделенные строки. На 12-й строке для формирования url используется метод <code>route()</code>.</p>
+<p>На 29-й строке также используем <code>route()</code>, но так как, нам нужно передать <code>id</code> задачи, после имени
+маршрута указываем словарь для нашего параметра <code>id</code>. Обратите внимание, что <code>task.id</code> не взять в двойные
+фигурные скобки.</p>
+<p>Рассмотрим с 17-й по 24-у строки. Здесь для того, чтобы установить нужный класс тегу <code>span</code>, проверяем 
+значение <code>task.done</code>. Так у нас отобразиться галочка или кружок, которые будут информировать о статусе
+задачи.</p>
+<h3 id="_7">Шаблон создания задачи</h3>
+<p>Создайте файл <code>templates/task/create.html</code> и добавьте в него код ниже.
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">templates/task/create.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span>
+<span class="normal"><a href="#__codelineno-7-17">17</a></span>
+<span class="normal"><a href="#__codelineno-7-18">18</a></span>
+<span class="normal"><a href="#__codelineno-7-19">19</a></span>
+<span class="normal"><a href="#__codelineno-7-20">20</a></span>
+<span class="normal"><a href="#__codelineno-7-21">21</a></span>
+<span class="normal"><a href="#__codelineno-7-22">22</a></span>
+<span class="normal"><a href="#__codelineno-7-23">23</a></span>
+<span class="normal"><a href="#__codelineno-7-24">24</a></span>
+<span class="normal"><a href="#__codelineno-7-25">25</a></span>
+<span class="normal"><a href="#__codelineno-7-26">26</a></span>
+<span class="normal"><a href="#__codelineno-7-27">27</a></span>
+<span class="normal"><a href="#__codelineno-7-28">28</a></span>
+<span class="normal"><a href="#__codelineno-7-29">29</a></span>
+<span class="normal"><a href="#__codelineno-7-30">30</a></span>
+<span class="normal"><a href="#__codelineno-7-31">31</a></span>
+<span class="normal"><a href="#__codelineno-7-32">32</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/static/style.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a>  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Title<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;center&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a>    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Создать задачу<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a>  <span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;{{ route(&#39;task.store&#39;) }}&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;POST&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a>    {{ csrf_field }}
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a>    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;text&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18"></a>    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;datetime-local&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;end_date&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19"></a>    <span class="p">&lt;</span><span class="nt">select</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;category_id&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20"></a>      <span class="p">&lt;</span><span class="nt">option</span> <span class="na">disabled</span><span class="p">&gt;</span>Выберите категорию<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21"></a>      @for category in categories
+<a id="__codelineno-7-22" name="__codelineno-7-22"></a>        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;{{category.id}}&quot;</span><span class="p">&gt;</span>{{category.name}}<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23"></a>      @endfor
+<a id="__codelineno-7-24" name="__codelineno-7-24"></a>    <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+<a id="__codelineno-7-25" name="__codelineno-7-25"></a>    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-7-26" name="__codelineno-7-26"></a>      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>Создать<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-7-27" name="__codelineno-7-27"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-7-28" name="__codelineno-7-28"></a>  <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+<a id="__codelineno-7-29" name="__codelineno-7-29"></a>
+<a id="__codelineno-7-30" name="__codelineno-7-30"></a><span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+<a id="__codelineno-7-31" name="__codelineno-7-31"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-7-32" name="__codelineno-7-32"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+Рассмотрим фрагмент кода с выбором категории.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">templates/task/create.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span>
+<span class="normal"><a href="#__codelineno-8-17">17</a></span>
+<span class="normal"><a href="#__codelineno-8-18">18</a></span>
+<span class="normal"><a href="#__codelineno-8-19">19</a></span>
+<span class="normal"><a href="#__codelineno-8-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>...
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>  <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Создать задачу<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>  <span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;{{ route(&#39;task.store&#39;) }}&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;POST&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>    {{ csrf_field }}
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;text&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a>    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;datetime-local&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;end_date&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a>    <span class="p">&lt;</span><span class="nt">select</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;category_id&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a>      <span class="p">&lt;</span><span class="nt">option</span> <span class="na">disabled</span><span class="p">&gt;</span>Выберите категорию<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="hll">      @for category in categories
+</span><a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="hll">        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;{{category.id}}&quot;</span><span class="p">&gt;</span>{{category.name}}<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span><a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="hll">      @endfor
+</span><a id="__codelineno-8-14" name="__codelineno-8-14"></a>    <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a>    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a>      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>Создать<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a>  <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19"></a>
+<a id="__codelineno-8-20" name="__codelineno-8-20"></a>...
+</code></pre></div></td></tr></table></div>
+<p>Здесь мы перебираем список категорий и формируем <code>select</code>. Значение <code>option</code> - это <code>id</code> категории, 
+а пользователю покажем имя категории. </p>
+<p>После создания задачи, нас должно перенаправить на список задач.</p>
+<h3 id="_8">Проверяем работу</h3>
+<p>Запустите сервер разработки и перейдите по ссылке <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a>
+и кликните по названию категории. Затем вы сможете создать задачу.</p>
+<p>После сохранения вас перенаправит на список задач той категории, которую вы выбрали при создании.</p>
+<h2 id="_9">Вывод, редактирование и удаление задачи</h2>
+<p>Реализуем функционал, который позволит нам получить одну задачу, а так же отредактировать и удалить ее.</p>
+<h3 id="_10">Контроллер</h3>
+<p>В контроллере <code>TaskController</code> обновим код в методах <code>show()</code>, <code>update()</code> и <code>destroy()</code>.
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">app/controllers/TaskController.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span>
+<span class="normal"><a href="#__codelineno-9-14">14</a></span>
+<span class="normal"><a href="#__codelineno-9-15">15</a></span>
+<span class="normal"><a href="#__codelineno-9-16">16</a></span>
+<span class="normal"><a href="#__codelineno-9-17">17</a></span>
+<span class="normal"><a href="#__codelineno-9-18">18</a></span>
+<span class="normal"><a href="#__codelineno-9-19">19</a></span>
+<span class="normal"><a href="#__codelineno-9-20">20</a></span>
+<span class="normal"><a href="#__codelineno-9-21">21</a></span>
+<span class="normal"><a href="#__codelineno-9-22">22</a></span>
+<span class="normal"><a href="#__codelineno-9-23">23</a></span>
+<span class="normal"><a href="#__codelineno-9-24">24</a></span>
+<span class="normal"><a href="#__codelineno-9-25">25</a></span>
+<span class="normal"><a href="#__codelineno-9-26">26</a></span>
+<span class="normal"><a href="#__codelineno-9-27">27</a></span>
+<span class="normal"><a href="#__codelineno-9-28">28</a></span>
+<span class="normal"><a href="#__codelineno-9-29">29</a></span>
+<span class="normal"><a href="#__codelineno-9-30">30</a></span>
+<span class="normal"><a href="#__codelineno-9-31">31</a></span>
+<span class="normal"><a href="#__codelineno-9-32">32</a></span>
+<span class="normal"><a href="#__codelineno-9-33">33</a></span>
+<span class="normal"><a href="#__codelineno-9-34">34</a></span>
+<span class="normal"><a href="#__codelineno-9-35">35</a></span>
+<span class="normal"><a href="#__codelineno-9-36">36</a></span>
+<span class="normal"><a href="#__codelineno-9-37">37</a></span>
+<span class="normal"><a href="#__codelineno-9-38">38</a></span>
+<span class="normal"><a href="#__codelineno-9-39">39</a></span>
+<span class="normal"><a href="#__codelineno-9-40">40</a></span>
+<span class="normal"><a href="#__codelineno-9-41">41</a></span>
+<span class="normal"><a href="#__codelineno-9-42">42</a></span>
+<span class="normal"><a href="#__codelineno-9-43">43</a></span>
+<span class="normal"><a href="#__codelineno-9-44">44</a></span>
+<span class="normal"><a href="#__codelineno-9-45">45</a></span>
+<span class="normal"><a href="#__codelineno-9-46">46</a></span>
+<span class="normal"><a href="#__codelineno-9-47">47</a></span>
+<span class="normal"><a href="#__codelineno-9-48">48</a></span>
+<span class="normal"><a href="#__codelineno-9-49">49</a></span>
+<span class="normal"><a href="#__codelineno-9-50">50</a></span>
+<span class="normal"><a href="#__codelineno-9-51">51</a></span>
+<span class="normal"><a href="#__codelineno-9-52">52</a></span>
+<span class="normal"><a href="#__codelineno-9-53">53</a></span>
+<span class="normal"><a href="#__codelineno-9-54">54</a></span>
+<span class="normal"><a href="#__codelineno-9-55">55</a></span>
+<span class="normal"><a href="#__codelineno-9-56">56</a></span>
+<span class="normal"><a href="#__codelineno-9-57">57</a></span>
+<span class="normal"><a href="#__codelineno-9-58">58</a></span>
+<span class="normal"><a href="#__codelineno-9-59">59</a></span>
+<span class="normal"><a href="#__codelineno-9-60">60</a></span>
+<span class="normal"><a href="#__codelineno-9-61">61</a></span>
+<span class="normal"><a href="#__codelineno-9-62">62</a></span>
+<span class="normal"><a href="#__codelineno-9-63">63</a></span>
+<span class="normal"><a href="#__codelineno-9-64">64</a></span>
+<span class="normal"><a href="#__codelineno-9-65">65</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">from</span> <span class="nn">masonite.controllers</span> <span class="kn">import</span> <span class="n">Controller</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="kn">from</span> <span class="nn">masonite.request</span> <span class="kn">import</span> <span class="n">Request</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="kn">from</span> <span class="nn">masonite.response</span> <span class="kn">import</span> <span class="n">Response</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="kn">from</span> <span class="nn">masonite.views</span> <span class="kn">import</span> <span class="n">View</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="kn">from</span> <span class="nn">app.models.Category</span> <span class="kn">import</span> <span class="n">Category</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="kn">from</span> <span class="nn">app.models.Task</span> <span class="kn">import</span> <span class="n">Task</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="k">class</span> <span class="nc">TaskController</span><span class="p">(</span><span class="n">Controller</span><span class="p">):</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a>    <span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">view</span><span class="p">:</span> <span class="n">View</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">):</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a>        <span class="n">tasks</span> <span class="o">=</span> <span class="n">Task</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="s2">&quot;category_id&quot;</span><span class="p">,</span> <span class="n">request</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="s2">&quot;category_id&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a>        <span class="k">return</span> <span class="n">view</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s2">&quot;task.list&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;tasks&quot;</span><span class="p">:</span> <span class="n">tasks</span><span class="p">})</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a>
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a>    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">view</span><span class="p">:</span> <span class="n">View</span><span class="p">):</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a>        <span class="n">categories</span> <span class="o">=</span> <span class="n">Category</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17"></a>        <span class="k">return</span> <span class="n">view</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s2">&quot;task.create&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;categories&quot;</span><span class="p">:</span> <span class="n">categories</span><span class="p">})</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18"></a>
+<a id="__codelineno-9-19" name="__codelineno-9-19"></a>    <span class="k">def</span> <span class="nf">store</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">,</span> <span class="n">response</span><span class="p">:</span> <span class="n">Response</span><span class="p">):</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20"></a>        <span class="n">error</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">validate</span><span class="p">(</span>
+<a id="__codelineno-9-21" name="__codelineno-9-21"></a>            <span class="p">{</span>
+<a id="__codelineno-9-22" name="__codelineno-9-22"></a>                <span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;required&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-23" name="__codelineno-9-23"></a>                <span class="s2">&quot;end_date&quot;</span><span class="p">:</span> <span class="s2">&quot;required&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-24" name="__codelineno-9-24"></a>                <span class="s2">&quot;category_id&quot;</span><span class="p">:</span> <span class="s2">&quot;required&quot;</span>
+<a id="__codelineno-9-25" name="__codelineno-9-25"></a>            <span class="p">}</span>
+<a id="__codelineno-9-26" name="__codelineno-9-26"></a>        <span class="p">)</span>
+<a id="__codelineno-9-27" name="__codelineno-9-27"></a>        <span class="k">if</span> <span class="n">error</span><span class="p">:</span>
+<a id="__codelineno-9-28" name="__codelineno-9-28"></a>            <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">redirect</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;task.create&quot;</span><span class="p">)</span>
+<a id="__codelineno-9-29" name="__codelineno-9-29"></a>
+<a id="__codelineno-9-30" name="__codelineno-9-30"></a>        <span class="n">Task</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="o">**</span><span class="n">request</span><span class="o">.</span><span class="n">only</span><span class="p">(</span><span class="s2">&quot;text&quot;</span><span class="p">,</span> <span class="s2">&quot;end_date&quot;</span><span class="p">,</span> <span class="s2">&quot;category_id&quot;</span><span class="p">))</span>
+<a id="__codelineno-9-31" name="__codelineno-9-31"></a>        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">redirect</span><span class="p">(</span>
+<a id="__codelineno-9-32" name="__codelineno-9-32"></a>            <span class="n">name</span><span class="o">=</span><span class="s2">&quot;task.list&quot;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;category_id&quot;</span><span class="p">:</span> <span class="n">request</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s2">&quot;category_id&quot;</span><span class="p">)}</span>
+<a id="__codelineno-9-33" name="__codelineno-9-33"></a>        <span class="p">)</span>
+<a id="__codelineno-9-34" name="__codelineno-9-34"></a>
+<a id="__codelineno-9-35" name="__codelineno-9-35"></a><span class="hll">    <span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">view</span><span class="p">:</span> <span class="n">View</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">):</span>
+</span><a id="__codelineno-9-36" name="__codelineno-9-36"></a><span class="hll">        <span class="n">task</span> <span class="o">=</span> <span class="n">Task</span><span class="o">.</span><span class="n">find_or_fail</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">))</span>
+</span><a id="__codelineno-9-37" name="__codelineno-9-37"></a><span class="hll">        <span class="n">categories</span> <span class="o">=</span> <span class="n">Category</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</span><a id="__codelineno-9-38" name="__codelineno-9-38"></a><span class="hll">        <span class="k">return</span> <span class="n">view</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s1">&#39;task.single&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;task&quot;</span><span class="p">:</span> <span class="n">task</span><span class="p">,</span> <span class="s2">&quot;categories&quot;</span><span class="p">:</span> <span class="n">categories</span><span class="p">})</span>
+</span><a id="__codelineno-9-39" name="__codelineno-9-39"></a>
+<a id="__codelineno-9-40" name="__codelineno-9-40"></a>    <span class="k">def</span> <span class="nf">edit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">view</span><span class="p">:</span> <span class="n">View</span><span class="p">):</span>
+<a id="__codelineno-9-41" name="__codelineno-9-41"></a>        <span class="k">return</span> <span class="n">view</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<a id="__codelineno-9-42" name="__codelineno-9-42"></a>
+<a id="__codelineno-9-43" name="__codelineno-9-43"></a><span class="hll">    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">,</span> <span class="n">response</span><span class="p">:</span> <span class="n">Response</span><span class="p">):</span>
+</span><a id="__codelineno-9-44" name="__codelineno-9-44"></a><span class="hll">        <span class="n">task</span> <span class="o">=</span> <span class="n">Task</span><span class="o">.</span><span class="n">find_or_fail</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">))</span>
+</span><a id="__codelineno-9-45" name="__codelineno-9-45"></a><span class="hll">
+</span><a id="__codelineno-9-46" name="__codelineno-9-46"></a><span class="hll">        <span class="n">errors</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">validate</span><span class="p">(</span>
+</span><a id="__codelineno-9-47" name="__codelineno-9-47"></a><span class="hll">            <span class="p">{</span>
+</span><a id="__codelineno-9-48" name="__codelineno-9-48"></a><span class="hll">                <span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;required&quot;</span><span class="p">,</span>
+</span><a id="__codelineno-9-49" name="__codelineno-9-49"></a><span class="hll">                <span class="s2">&quot;end_date&quot;</span><span class="p">:</span> <span class="s2">&quot;required&quot;</span><span class="p">,</span>
+</span><a id="__codelineno-9-50" name="__codelineno-9-50"></a><span class="hll">                <span class="s2">&quot;category_id&quot;</span><span class="p">:</span> <span class="s2">&quot;required&quot;</span>
+</span><a id="__codelineno-9-51" name="__codelineno-9-51"></a><span class="hll">            <span class="p">},</span>
+</span><a id="__codelineno-9-52" name="__codelineno-9-52"></a><span class="hll">        <span class="p">)</span>
+</span><a id="__codelineno-9-53" name="__codelineno-9-53"></a><span class="hll">        <span class="k">if</span> <span class="n">errors</span><span class="p">:</span>
+</span><a id="__codelineno-9-54" name="__codelineno-9-54"></a><span class="hll">            <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">redirect</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;task.single&#39;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">request</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">)})</span>
+</span><a id="__codelineno-9-55" name="__codelineno-9-55"></a><span class="hll">
+</span><a id="__codelineno-9-56" name="__codelineno-9-56"></a><span class="hll">        <span class="n">data</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">only</span><span class="p">(</span><span class="s2">&quot;text&quot;</span><span class="p">,</span> <span class="s2">&quot;end_date&quot;</span><span class="p">,</span> <span class="s2">&quot;category_id&quot;</span><span class="p">)</span>
+</span><a id="__codelineno-9-57" name="__codelineno-9-57"></a><span class="hll">        <span class="n">data</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;done&quot;</span><span class="p">:</span> <span class="n">request</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s2">&quot;done&quot;</span><span class="p">,</span> <span class="s2">&quot;off&quot;</span><span class="p">)})</span>
+</span><a id="__codelineno-9-58" name="__codelineno-9-58"></a><span class="hll">        <span class="n">task</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span><a id="__codelineno-9-59" name="__codelineno-9-59"></a><span class="hll">        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">redirect</span><span class="p">(</span>
+</span><a id="__codelineno-9-60" name="__codelineno-9-60"></a><span class="hll">            <span class="n">name</span><span class="o">=</span><span class="s2">&quot;task.list&quot;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;category_id&quot;</span><span class="p">:</span> <span class="n">request</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s2">&quot;category_id&quot;</span><span class="p">)}</span>
+</span><a id="__codelineno-9-61" name="__codelineno-9-61"></a><span class="hll">        <span class="p">)</span>
+</span><a id="__codelineno-9-62" name="__codelineno-9-62"></a>
+<a id="__codelineno-9-63" name="__codelineno-9-63"></a><span class="hll">    <span class="k">def</span> <span class="nf">destroy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">,</span> <span class="n">response</span><span class="p">:</span> <span class="n">Response</span><span class="p">):</span>
+</span><a id="__codelineno-9-64" name="__codelineno-9-64"></a><span class="hll">        <span class="n">Task</span><span class="o">.</span><span class="n">find_or_fail</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+</span><a id="__codelineno-9-65" name="__codelineno-9-65"></a><span class="hll">        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">redirect</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;task.list&quot;</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+Рассмотрим каждый метод по отдельности. Начнем с метода <code>show()</code>.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">app/controllers/TaskController.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span>
+<span class="normal"><a href="#__codelineno-10-4">4</a></span>
+<span class="normal"><a href="#__codelineno-10-5">5</a></span>
+<span class="normal"><a href="#__codelineno-10-6">6</a></span>
+<span class="normal"><a href="#__codelineno-10-7">7</a></span>
+<span class="normal"><a href="#__codelineno-10-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="o">...</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="k">class</span> <span class="nc">TaskController</span><span class="p">(</span><span class="n">Controller</span><span class="p">):</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a>    <span class="o">...</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a>    <span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">view</span><span class="p">:</span> <span class="n">View</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">):</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a>        <span class="n">task</span> <span class="o">=</span> <span class="n">Task</span><span class="o">.</span><span class="n">find_or_fail</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">))</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="hll">        <span class="n">categories</span> <span class="o">=</span> <span class="n">Category</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</span><a id="__codelineno-10-7" name="__codelineno-10-7"></a>        <span class="k">return</span> <span class="n">view</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s1">&#39;task.single&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;task&quot;</span><span class="p">:</span> <span class="n">task</span><span class="p">,</span> <span class="s2">&quot;categories&quot;</span><span class="p">:</span> <span class="n">categories</span><span class="p">})</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a>    <span class="o">...</span>
+</code></pre></div></td></tr></table></div>
+<p>Помимо того, что получаем задачу по <code>id</code>, еще нам потребуется получить все категории. Они нам нужны
+для того, чтобы мы могли изменить категорию задачи при редактировании. </p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">app/controllers/TaskController.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span>
+<span class="normal"><a href="#__codelineno-11-14">14</a></span>
+<span class="normal"><a href="#__codelineno-11-15">15</a></span>
+<span class="normal"><a href="#__codelineno-11-16">16</a></span>
+<span class="normal"><a href="#__codelineno-11-17">17</a></span>
+<span class="normal"><a href="#__codelineno-11-18">18</a></span>
+<span class="normal"><a href="#__codelineno-11-19">19</a></span>
+<span class="normal"><a href="#__codelineno-11-20">20</a></span>
+<span class="normal"><a href="#__codelineno-11-21">21</a></span>
+<span class="normal"><a href="#__codelineno-11-22">22</a></span>
+<span class="normal"><a href="#__codelineno-11-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="o">...</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="k">class</span> <span class="nc">TaskController</span><span class="p">(</span><span class="n">Controller</span><span class="p">):</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>    <span class="o">...</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a>    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">,</span> <span class="n">response</span><span class="p">:</span> <span class="n">Response</span><span class="p">):</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a>        <span class="n">task</span> <span class="o">=</span> <span class="n">Task</span><span class="o">.</span><span class="n">find_or_fail</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">))</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a>        <span class="n">errors</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">validate</span><span class="p">(</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a>            <span class="p">{</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a>                <span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;required&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a>                <span class="s2">&quot;end_date&quot;</span><span class="p">:</span> <span class="s2">&quot;required&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a>                <span class="s2">&quot;category_id&quot;</span><span class="p">:</span> <span class="s2">&quot;required&quot;</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a>            <span class="p">},</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a>        <span class="p">)</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14"></a>        <span class="k">if</span> <span class="n">errors</span><span class="p">:</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15"></a>            <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">redirect</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;task.single&#39;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">request</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">)})</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16"></a>
+<a id="__codelineno-11-17" name="__codelineno-11-17"></a><span class="hll">        <span class="n">data</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">only</span><span class="p">(</span><span class="s2">&quot;text&quot;</span><span class="p">,</span> <span class="s2">&quot;end_date&quot;</span><span class="p">,</span> <span class="s2">&quot;category_id&quot;</span><span class="p">)</span>
+</span><a id="__codelineno-11-18" name="__codelineno-11-18"></a><span class="hll">        <span class="n">data</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;done&quot;</span><span class="p">:</span> <span class="n">request</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s2">&quot;done&quot;</span><span class="p">,</span> <span class="s2">&quot;off&quot;</span><span class="p">)})</span>
+</span><a id="__codelineno-11-19" name="__codelineno-11-19"></a><span class="hll">        <span class="n">task</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span><a id="__codelineno-11-20" name="__codelineno-11-20"></a>        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">redirect</span><span class="p">(</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21"></a>            <span class="n">name</span><span class="o">=</span><span class="s2">&quot;task.list&quot;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;category_id&quot;</span><span class="p">:</span> <span class="n">request</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s2">&quot;category_id&quot;</span><span class="p">)}</span>
+<a id="__codelineno-11-22" name="__codelineno-11-22"></a>        <span class="p">)</span>
+<a id="__codelineno-11-23" name="__codelineno-11-23"></a>    <span class="o">...</span>
+</code></pre></div></td></tr></table></div>
+<p>В методе <code>update()</code> на 17-й строке получаем словарь с перечисленными данными.</p>
+<p>Так-как <code>done</code> необязательно для заполнения и при его отсутствии нам нужно получить значение по умолчанию.
+Если пользователь не выберет данный <code>checkbox</code>, то он не будет передан вместе с данными формы, т.е. 
+будет отсутствовать. И по логики нашего приложения это значит, что <code>done</code> установлен в <code>off</code>.
+Для этого на 18-й строке в словарь добавляем ключ <code>done</code> со значением который выбрал пользователь или
+по умолчанию <code>"off"</code>.</p>
+<p>Для обновления нескольких столбцов в таблице, мы используем метод модели <code>update()</code> в который 
+передаем словарем пришедшие данные.</p>
+<div class="admonition note success">
+<p class="admonition-title">Обновление записей</p>
+<p>При обновлении записи применяются только те атрибуты, которые претерпели изменения. 
+Если изменений нет, обновление не будет запущено.
+Вы можете переопределить это поведение несколькими способами:</p>
+<ul>
+<li>Передать <code>force=True</code> методу <code>update()</code>:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="n">Task</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;Закончить проект.&quot;</span><span class="p">},</span> <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></li>
+<li>Определить атрибут <code>__force_update__</code> в классе модели:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span>
+<span class="normal"><a href="#__codelineno-13-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="k">class</span> <span class="nc">Task</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a>    <span class="n">__force_update__</span> <span class="o">=</span> <span class="kc">True</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="n">Task</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;Закончить проект.&quot;</span><span class="p">})</span>
+</code></pre></div></td></tr></table></div></li>
+<li>Использовать метод модели <code>force_update()</code>:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="n">Task</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">force_update</span><span class="p">({</span><span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;Закончить проект.&quot;</span><span class="p">})</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+</div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">app/controllers/TaskController.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span>
+<span class="normal"><a href="#__codelineno-15-4">4</a></span>
+<span class="normal"><a href="#__codelineno-15-5">5</a></span>
+<span class="normal"><a href="#__codelineno-15-6">6</a></span>
+<span class="normal"><a href="#__codelineno-15-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="o">...</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="k">class</span> <span class="nc">TaskController</span><span class="p">(</span><span class="n">Controller</span><span class="p">):</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a>    <span class="o">...</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a>    <span class="k">def</span> <span class="nf">destroy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">,</span> <span class="n">response</span><span class="p">:</span> <span class="n">Response</span><span class="p">):</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="hll">        <span class="n">Task</span><span class="o">.</span><span class="n">find_or_fail</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+</span><a id="__codelineno-15-6" name="__codelineno-15-6"></a>        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">redirect</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;task.list&quot;</span><span class="p">)</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a>    <span class="o">...</span>
+</code></pre></div></td></tr></table></div>
+<p>В методе <code>destroy()</code> мы вызываем метод <code>delete()</code> зразу после <code>find_or_fail()</code>.
+Не используя лишнюю переменную, как в прошлый раз в категории.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>post = Category.find_or_fail(request.param(&quot;id&quot;))
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>post.delete()
+</code></pre></div></p>
+<h3 id="_11">Шаблон</h3>
+<p>Создайте файл <code>single.html</code> в <code>templates/task</code> и добавьте в него следующий код.
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">templates/task/single.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-17-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-17-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-17-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-17-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-17-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-17-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-17-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-17-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-17-10">10</a></span>
+<span class="normal"><a href="#__codelineno-17-11">11</a></span>
+<span class="normal"><a href="#__codelineno-17-12">12</a></span>
+<span class="normal"><a href="#__codelineno-17-13">13</a></span>
+<span class="normal"><a href="#__codelineno-17-14">14</a></span>
+<span class="normal"><a href="#__codelineno-17-15">15</a></span>
+<span class="normal"><a href="#__codelineno-17-16">16</a></span>
+<span class="normal"><a href="#__codelineno-17-17">17</a></span>
+<span class="normal"><a href="#__codelineno-17-18">18</a></span>
+<span class="normal"><a href="#__codelineno-17-19">19</a></span>
+<span class="normal"><a href="#__codelineno-17-20">20</a></span>
+<span class="normal"><a href="#__codelineno-17-21">21</a></span>
+<span class="normal"><a href="#__codelineno-17-22">22</a></span>
+<span class="normal"><a href="#__codelineno-17-23">23</a></span>
+<span class="normal"><a href="#__codelineno-17-24">24</a></span>
+<span class="normal"><a href="#__codelineno-17-25">25</a></span>
+<span class="normal"><a href="#__codelineno-17-26">26</a></span>
+<span class="normal"><a href="#__codelineno-17-27">27</a></span>
+<span class="normal"><a href="#__codelineno-17-28">28</a></span>
+<span class="normal"><a href="#__codelineno-17-29">29</a></span>
+<span class="normal"><a href="#__codelineno-17-30">30</a></span>
+<span class="normal"><a href="#__codelineno-17-31">31</a></span>
+<span class="normal"><a href="#__codelineno-17-32">32</a></span>
+<span class="normal"><a href="#__codelineno-17-33">33</a></span>
+<span class="normal"><a href="#__codelineno-17-34">34</a></span>
+<span class="normal"><a href="#__codelineno-17-35">35</a></span>
+<span class="normal"><a href="#__codelineno-17-36">36</a></span>
+<span class="normal"><a href="#__codelineno-17-37">37</a></span>
+<span class="normal"><a href="#__codelineno-17-38">38</a></span>
+<span class="normal"><a href="#__codelineno-17-39">39</a></span>
+<span class="normal"><a href="#__codelineno-17-40">40</a></span>
+<span class="normal"><a href="#__codelineno-17-41">41</a></span>
+<span class="normal"><a href="#__codelineno-17-42">42</a></span>
+<span class="normal"><a href="#__codelineno-17-43">43</a></span>
+<span class="normal"><a href="#__codelineno-17-44">44</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a>  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a>  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/static/style.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a>  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Редактирование задачи<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9"></a>
+<a id="__codelineno-17-10" name="__codelineno-17-10"></a><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+<a id="__codelineno-17-11" name="__codelineno-17-11"></a>  <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Редактирование задачи<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<a id="__codelineno-17-12" name="__codelineno-17-12"></a>
+<a id="__codelineno-17-13" name="__codelineno-17-13"></a>  <span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;{{ route(&#39;task.update&#39;, {&#39;id&#39;: task.id}) }}&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;POST&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-17-14" name="__codelineno-17-14"></a>    {{ csrf_field }}
+<a id="__codelineno-17-15" name="__codelineno-17-15"></a>    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;done&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;on&quot;</span>
+<a id="__codelineno-17-16" name="__codelineno-17-16"></a>           <span class="err">@</span><span class="na">if</span> <span class="na">task</span><span class="err">.</span><span class="na">done </span><span class="o">=</span><span class="s">=</span> <span class="err">&#39;</span><span class="na">on</span><span class="err">&#39;</span>
+<a id="__codelineno-17-17" name="__codelineno-17-17"></a>            <span class="na">checked</span>
+<a id="__codelineno-17-18" name="__codelineno-17-18"></a>           <span class="err">@</span><span class="na">endif</span>
+<a id="__codelineno-17-19" name="__codelineno-17-19"></a>    <span class="p">&gt;</span>
+<a id="__codelineno-17-20" name="__codelineno-17-20"></a>    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;{{task.text}}&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-17-21" name="__codelineno-17-21"></a>    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;datetime-local&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;end_date&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;{{task.end_date}}&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-17-22" name="__codelineno-17-22"></a>    <span class="p">&lt;</span><span class="nt">select</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;category_id&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-17-23" name="__codelineno-17-23"></a>      <span class="p">&lt;</span><span class="nt">option</span> <span class="na">disabled</span><span class="p">&gt;</span>Выберите категорию<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+<a id="__codelineno-17-24" name="__codelineno-17-24"></a>      @for category in categories
+<a id="__codelineno-17-25" name="__codelineno-17-25"></a>
+<a id="__codelineno-17-26" name="__codelineno-17-26"></a>      <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;{{category.id}}&quot;</span>
+<a id="__codelineno-17-27" name="__codelineno-17-27"></a>              <span class="err">@</span><span class="na">if</span> <span class="na">task</span><span class="err">.</span><span class="na">category_id</span><span class="o">=</span><span class="s">=</span> <span class="na">category</span><span class="err">.</span><span class="na">id</span>
+<a id="__codelineno-17-28" name="__codelineno-17-28"></a>                <span class="na">selected</span>
+<a id="__codelineno-17-29" name="__codelineno-17-29"></a>              <span class="err">@</span><span class="na">endif</span>
+<a id="__codelineno-17-30" name="__codelineno-17-30"></a>      <span class="p">&gt;</span>
+<a id="__codelineno-17-31" name="__codelineno-17-31"></a>        {{category.name}}
+<a id="__codelineno-17-32" name="__codelineno-17-32"></a>      <span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+<a id="__codelineno-17-33" name="__codelineno-17-33"></a>
+<a id="__codelineno-17-34" name="__codelineno-17-34"></a>      @endfor
+<a id="__codelineno-17-35" name="__codelineno-17-35"></a>    <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+<a id="__codelineno-17-36" name="__codelineno-17-36"></a>    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-17-37" name="__codelineno-17-37"></a>      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>Сохранить<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-17-38" name="__codelineno-17-38"></a>      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn-del&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ route(&#39;task.delete&#39;, {&#39;id&#39;: task.id}) }}&quot;</span><span class="p">&gt;</span>Удалить<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<a id="__codelineno-17-39" name="__codelineno-17-39"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-17-40" name="__codelineno-17-40"></a>  <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+<a id="__codelineno-17-41" name="__codelineno-17-41"></a>
+<a id="__codelineno-17-42" name="__codelineno-17-42"></a><span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+<a id="__codelineno-17-43" name="__codelineno-17-43"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-17-44" name="__codelineno-17-44"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+Разберем фрагмент с <code>checkbox</code>.
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">templates/task/single.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-18-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-18-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-18-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-18-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-18-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-18-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-18-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-18-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-18-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a>...
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a>  <span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;{{ route(&#39;task.update&#39;, {&#39;id&#39;: task.id}) }}&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;POST&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a>    {{ csrf_field }}
+<a id="__codelineno-18-4" name="__codelineno-18-4"></a><span class="hll">    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;done&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;on&quot;</span>
+</span><a id="__codelineno-18-5" name="__codelineno-18-5"></a><span class="hll">           <span class="err">@</span><span class="na">if</span> <span class="na">task</span><span class="err">.</span><span class="na">done </span><span class="o">=</span><span class="s">=</span> <span class="err">&#39;</span><span class="na">on</span><span class="err">&#39;</span>
+</span><a id="__codelineno-18-6" name="__codelineno-18-6"></a><span class="hll">            <span class="na">checked</span>
+</span><a id="__codelineno-18-7" name="__codelineno-18-7"></a><span class="hll">           <span class="err">@</span><span class="na">endif</span>
+</span><a id="__codelineno-18-8" name="__codelineno-18-8"></a><span class="hll">    <span class="p">&gt;</span>
+</span><a id="__codelineno-18-9" name="__codelineno-18-9"></a>    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;{{task.text}}&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-18-10" name="__codelineno-18-10"></a>...
+</code></pre></div></td></tr></table></div>
+Если значение <code>done</code> буден <code>on</code>, тогда <code>checkbox</code> будет отображаться как выбранный.</p>
+<p>Теперь рассмотрим более подробно выбор категории.
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">templates/task/single.html</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-19-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-19-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-19-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-19-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-19-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-19-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-19-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-19-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-19-10">10</a></span>
+<span class="normal"><a href="#__codelineno-19-11">11</a></span>
+<span class="normal"><a href="#__codelineno-19-12">12</a></span>
+<span class="normal"><a href="#__codelineno-19-13">13</a></span>
+<span class="normal"><a href="#__codelineno-19-14">14</a></span>
+<span class="normal"><a href="#__codelineno-19-15">15</a></span>
+<span class="normal"><a href="#__codelineno-19-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a>...
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a>    <span class="p">&lt;</span><span class="nt">select</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;category_id&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a>      <span class="p">&lt;</span><span class="nt">option</span> <span class="na">disabled</span><span class="p">&gt;</span>Выберите категорию<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a>      @for category in categories
+<a id="__codelineno-19-5" name="__codelineno-19-5"></a>
+<a id="__codelineno-19-6" name="__codelineno-19-6"></a>        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;{{category.id}}&quot;</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7"></a><span class="hll">              <span class="err">@</span><span class="na">if</span> <span class="na">task</span><span class="err">.</span><span class="na">category_id </span><span class="o">=</span><span class="s">=</span> <span class="na">category</span><span class="err">.</span><span class="na">id</span>
+</span><a id="__codelineno-19-8" name="__codelineno-19-8"></a><span class="hll">                <span class="na">selected</span>
+</span><a id="__codelineno-19-9" name="__codelineno-19-9"></a><span class="hll">              <span class="err">@</span><span class="na">endif</span>
+</span><a id="__codelineno-19-10" name="__codelineno-19-10"></a>        <span class="p">&gt;</span>
+<a id="__codelineno-19-11" name="__codelineno-19-11"></a>          {{category.name}}
+<a id="__codelineno-19-12" name="__codelineno-19-12"></a>        <span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+<a id="__codelineno-19-13" name="__codelineno-19-13"></a>
+<a id="__codelineno-19-14" name="__codelineno-19-14"></a>      @endfor
+<a id="__codelineno-19-15" name="__codelineno-19-15"></a>    <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+<a id="__codelineno-19-16" name="__codelineno-19-16"></a>...
+</code></pre></div></td></tr></table></div>
+Для того чтобы сразу была показана категория, которая была выбрана до этого, используем оператор <code>if</code>.
+Сравнивая категорию задачи с текущей категорией из цикла. Если категории совпадают устанавливаем
+<code>selected</code>.</p>
+<div class="admonition note success">
+<p class="admonition-title">Оператор if</p>
+<p>Обратите внимание, что оператор <code>if</code> находиться внутри html тега. Для того чтобы наш код 
+сработал, мы его написали с новой строки. Это нюанс шаблонизатора.</p>
+</div>
+<h3 id="_12">Проверим работу</h3>
+<p>Теперь можно запустить сервер разработки и проверить работу. Перейдите на страницу списка задач и
+попробуйте отредактировать или удалить задачу.</p>
+<h2 id="_13">Итог</h2>
+<p>В данном руководстве вы познакомились с базовыми функциями фреймворка Masonite.</p>
+<p>Полный код проекта можно найти на <a href="">GitHub</a></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
+      
+        
+        <a href="../category/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Категории" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Назад
+              </span>
+              Категории
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../../basics/routing/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Маршрутизация (Route)" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Вперед
+              </span>
+              Маршрутизация (Route)
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/MasoniteFramework/masonite" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://t.me/masonite_channel" target="_blank" rel="noopener" title="t.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M248 8C111.033 8 0 119.033 0 256s111.033 248 248 248 248-111.033 248-248S384.967 8 248 8Zm114.952 168.66c-3.732 39.215-19.881 134.378-28.1 178.3-3.476 18.584-10.322 24.816-16.948 25.425-14.4 1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25 5.342-39.5 3.652-3.793 67.107-61.51 68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608 69.142-14.845 10.194-26.894 9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7 18.45-13.7 108.446-47.248 144.628-62.3c68.872-28.647 83.183-33.623 92.511-33.789 2.052-.034 6.639.474 9.61 2.885a10.452 10.452 0 0 1 3.53 6.716 43.765 43.765 0 0 1 .417 9.769Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.config.lang": "ru", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\u041f\u043e\u0438\u0441\u043a", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version.title": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.8492ddcf.min.js"></script>
+      
+    
+  </body>
+</html>

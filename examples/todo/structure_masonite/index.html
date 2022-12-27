@@ -612,12 +612,60 @@
       
       
         <label class="md-nav__link" for="__nav_4">
+          Особенности
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Особенности" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Особенности
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../feature/api/" class="md-nav__link">
+        Разработка API
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
           Архитектура
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Архитектура" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+        <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Архитектура
         </label>
@@ -733,24 +781,45 @@
 
 
 <h1 id="masonite-">Структура проекта Masonite - ДОРАБОТАТЬ</h1>
-<p><strong>app</strong> - основная директория проекта, где вы пишите свою логику.</p>
-<p><strong>/controllers</strong> - это место, где вы обрабатываете запрос и возвращаете ответы, которые видите в 
+<p><strong>app/</strong> - основная директория проекта, где вы пишите свою логику.</p>
+<ul>
+<li><strong>/controllers</strong> - это место, где вы обрабатываете запрос и возвращаете ответы, которые видите в 
 веб-браузере. Ответы могут быть словарями, списками, html (view) или любым классом, который может 
-отображать ответ.</p>
-<p><strong>/middleware -</strong> (промежуточное программное обеспечение) является чрезвычайно важным аспектом 
+отображать ответ.</li>
+<li><strong>/middleware</strong> - (промежуточное программное обеспечение) является чрезвычайно важным аспектом 
 веб-приложений, поскольку оно позволяет запускать важный код до или после каждого запроса или 
-определенных маршрутов.</p>
-<p><strong>/models</strong> - это самый простой способ взаимодействия с вашими таблицами. Модель используем для 
+определенных маршрутов.</li>
+<li><strong>/models</strong> - это самый простой способ взаимодействия с вашими таблицами. Модель используем для 
 запроса данных в таблице или для создания новых записей, извлечения связанных записей между 
-таблицами и т.д.</p>
-<p><strong>/providers</strong> - это ключевые строительные блоки для Masonite. Единственное, что они делают, 
-регистрируют вещи в Service Container или запускают логику по запросам.</p>
-<p><strong>config</strong> - различные настройки проекта.</p>
-<p><strong>/providers.py</strong> содержит список всех Service Providers, участвующих в создании фреймворка.</p>
-<p><strong>databases</strong> - миграции и загрузка демо данных (seed)</p>
-<p><strong>resources</strong> - статические файлы, например такие как js и css.</p>
-<p><strong>routes</strong> - ваши юрл.</p>
-<p><strong>storage</strong> - билд ваших файлов фронтенда.</p>
+таблицами и т.д.</li>
+<li><strong>/providers</strong> - это ключевые строительные блоки для Masonite. Единственное, что они делают, 
+регистрируют вещи в Service Container или запускают логику по запросам.</li>
+</ul>
+<p><strong>config/</strong> - различные настройки проекта.</p>
+<ul>
+<li><strong>/application.py</strong> - настройки секретного ключа, debug режима и т.д.</li>
+<li><strong>/auth.py</strong> - настройка авторизации: модель пользователя и т.д.</li>
+<li><strong>/broadcast.py</strong> - настройки драйвера Pusher.</li>
+<li><strong>/cache.py</strong> - настройки кеширования для Redis, Memcached и файлового драйвера.</li>
+<li><strong>/database.py</strong> - настройки базы данных для mysql, postgres, mssql, sqlite.</li>
+<li><strong>/filesystem.py</strong> - настройки для драйвера хранения файлов, локально или в облаке (S3).</li>
+<li><strong>/mail.py</strong> - настройки для драйвера отправки почты.</li>
+<li><strong>/notification.py</strong> - настройки для отправки уведомлений в slack, sms или в БД.</li>
+<li><strong>/queue.py</strong> - настройки драйверов очередей, async, database и amqp.</li>
+<li><strong>/security.py</strong> - настройки CORS.</li>
+<li><strong>/session.py</strong> - настройка сессий, cookie и redis. </li>
+<li><strong>/providers.py</strong> содержит список всех Service Providers.</li>
+</ul>
+<p><strong>databases/</strong> - миграции и загрузка демо данных (seed)</p>
+<p><strong>resources/</strong> - статические файлы, например такие как js и css.</p>
+<p><strong>routes/</strong> - ваши маршруты.</p>
+<p><strong>storage/</strong> - билд ваших файлов фронтенда.</p>
+<p><strong>templates/</strong> - ваши html файлы.</p>
+<p><strong>tests/</strong> - ваши тесты.</p>
+<p><strong>.env</strong> - переменные окружения.</p>
+<p><strong>.env.testing</strong> - переменные окружения для тестов.</p>
+<p><strong>craft.py</strong> - этот файл будет использоваться всякий раз, когда вы запускаете команду <code>python craft</code>.</p>
+<p><strong>Kernel.py</strong> - файл, который используется для настройки всего вашего проекта.</p>
 <h2 id="_1">Начало</h2>
 <h3 id="routes">Routes</h3>
 <p>Рассмотрим файл <code>routes/web.py</code>.

@@ -1493,7 +1493,9 @@
 <span class="normal"><a href="#__codelineno-9-62">62</a></span>
 <span class="normal"><a href="#__codelineno-9-63">63</a></span>
 <span class="normal"><a href="#__codelineno-9-64">64</a></span>
-<span class="normal"><a href="#__codelineno-9-65">65</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">from</span> <span class="nn">masonite.controllers</span> <span class="kn">import</span> <span class="n">Controller</span>
+<span class="normal"><a href="#__codelineno-9-65">65</a></span>
+<span class="normal"><a href="#__codelineno-9-66">66</a></span>
+<span class="normal"><a href="#__codelineno-9-67">67</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">from</span> <span class="nn">masonite.controllers</span> <span class="kn">import</span> <span class="n">Controller</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="kn">from</span> <span class="nn">masonite.request</span> <span class="kn">import</span> <span class="n">Request</span>
 <a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="kn">from</span> <span class="nn">masonite.response</span> <span class="kn">import</span> <span class="n">Response</span>
 <a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="kn">from</span> <span class="nn">masonite.views</span> <span class="kn">import</span> <span class="n">View</span>
@@ -1557,7 +1559,9 @@
 </span><a id="__codelineno-9-62" name="__codelineno-9-62"></a>
 <a id="__codelineno-9-63" name="__codelineno-9-63"></a><span class="hll">    <span class="k">def</span> <span class="nf">destroy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">,</span> <span class="n">response</span><span class="p">:</span> <span class="n">Response</span><span class="p">):</span>
 </span><a id="__codelineno-9-64" name="__codelineno-9-64"></a><span class="hll">        <span class="n">Task</span><span class="o">.</span><span class="n">find_or_fail</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
-</span><a id="__codelineno-9-65" name="__codelineno-9-65"></a><span class="hll">        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">redirect</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;task.list&quot;</span><span class="p">)</span>
+</span><a id="__codelineno-9-65" name="__codelineno-9-65"></a><span class="hll">        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">redirect</span><span class="p">(</span>
+</span><a id="__codelineno-9-66" name="__codelineno-9-66"></a><span class="hll">            <span class="n">name</span><span class="o">=</span><span class="s2">&quot;task.list&quot;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;category_id&quot;</span><span class="p">:</span> <span class="n">request</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s2">&quot;category_id&quot;</span><span class="p">)}</span>
+</span><a id="__codelineno-9-67" name="__codelineno-9-67"></a><span class="hll">        <span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 Рассмотрим каждый метод по отдельности. Начнем с метода <code>show()</code>.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">app/controllers/TaskController.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
@@ -1661,13 +1665,17 @@
 <span class="normal"><a href="#__codelineno-15-4">4</a></span>
 <span class="normal"><a href="#__codelineno-15-5">5</a></span>
 <span class="normal"><a href="#__codelineno-15-6">6</a></span>
-<span class="normal"><a href="#__codelineno-15-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="o">...</span>
+<span class="normal"><a href="#__codelineno-15-7">7</a></span>
+<span class="normal"><a href="#__codelineno-15-8">8</a></span>
+<span class="normal"><a href="#__codelineno-15-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="o">...</span>
 <a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="k">class</span> <span class="nc">TaskController</span><span class="p">(</span><span class="n">Controller</span><span class="p">):</span>
 <a id="__codelineno-15-3" name="__codelineno-15-3"></a>    <span class="o">...</span>
 <a id="__codelineno-15-4" name="__codelineno-15-4"></a>    <span class="k">def</span> <span class="nf">destroy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">:</span> <span class="n">Request</span><span class="p">,</span> <span class="n">response</span><span class="p">:</span> <span class="n">Response</span><span class="p">):</span>
 <a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="hll">        <span class="n">Task</span><span class="o">.</span><span class="n">find_or_fail</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
-</span><a id="__codelineno-15-6" name="__codelineno-15-6"></a>        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">redirect</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;task.list&quot;</span><span class="p">)</span>
-<a id="__codelineno-15-7" name="__codelineno-15-7"></a>    <span class="o">...</span>
+</span><a id="__codelineno-15-6" name="__codelineno-15-6"></a>        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">redirect</span><span class="p">(</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a>            <span class="n">name</span><span class="o">=</span><span class="s2">&quot;task.list&quot;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;category_id&quot;</span><span class="p">:</span> <span class="n">request</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="s2">&quot;category_id&quot;</span><span class="p">)}</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a>        <span class="p">)</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a>    <span class="o">...</span>
 </code></pre></div></td></tr></table></div>
 <p>В методе <code>destroy()</code> мы вызываем метод <code>delete()</code> зразу после <code>find_or_fail()</code>.
 Не используя лишнюю переменную, как в прошлый раз в категории.
@@ -1756,7 +1764,7 @@
 <a id="__codelineno-17-35" name="__codelineno-17-35"></a>    <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
 <a id="__codelineno-17-36" name="__codelineno-17-36"></a>    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
 <a id="__codelineno-17-37" name="__codelineno-17-37"></a>      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>Сохранить<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-17-38" name="__codelineno-17-38"></a>      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn-del&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ route(&#39;task.delete&#39;, {&#39;id&#39;: task.id}) }}&quot;</span><span class="p">&gt;</span>Удалить<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<a id="__codelineno-17-38" name="__codelineno-17-38"></a>      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn-del&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ route(&#39;task.delete&#39;, {&#39;id&#39;: task.id})}}?category_id={{task.category_id}} &quot;</span><span class="p">&gt;</span>Удалить<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 <a id="__codelineno-17-39" name="__codelineno-17-39"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <a id="__codelineno-17-40" name="__codelineno-17-40"></a>  <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 <a id="__codelineno-17-41" name="__codelineno-17-41"></a>

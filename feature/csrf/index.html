@@ -13,7 +13,7 @@
     
     
       
-        <title>Middleware - Документация Masonite</title>
+        <title>CSRF защита - Документация Masonite</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#middleware-masonite" class="md-skip">
+        <a href="#csrf-masonite" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Middleware
+              CSRF защита
             
           </span>
         </div>
@@ -355,14 +355,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
       
@@ -385,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../routing/" class="md-nav__link">
+      <a href="../../basics/routing/" class="md-nav__link">
         Маршрутизация (Route)
       </a>
     </li>
@@ -399,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../controllers/" class="md-nav__link">
+      <a href="../../basics/controllers/" class="md-nav__link">
         Контроллеры (Controllers)
       </a>
     </li>
@@ -411,94 +409,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Middleware
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../basics/middleware/" class="md-nav__link">
         Middleware
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Содержание раздела">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Содержание раздела
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    Начало
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    Конфигурация
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#middleware" class="md-nav__link">
-    Middleware маршрутизации
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#middleware_1" class="md-nav__link">
-    Параметры middleware
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    Параметры запроса
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#middleware_2" class="md-nav__link">
-    Создание middleware
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#middleware_3" class="md-nav__link">
-    Использование middleware
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -510,7 +425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../response/" class="md-nav__link">
+      <a href="../../basics/response/" class="md-nav__link">
         Response
       </a>
     </li>
@@ -524,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../request/" class="md-nav__link">
+      <a href="../../basics/request/" class="md-nav__link">
         Request
       </a>
     </li>
@@ -538,7 +453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../static_files/" class="md-nav__link">
+      <a href="../../basics/static_files/" class="md-nav__link">
         Статические файлы
       </a>
     </li>
@@ -552,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../view/" class="md-nav__link">
+      <a href="../../basics/view/" class="md-nav__link">
         Представления (View)
       </a>
     </li>
@@ -566,7 +481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../environments/" class="md-nav__link">
+      <a href="../../basics/environments/" class="md-nav__link">
         Environments
       </a>
     </li>
@@ -580,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuration/" class="md-nav__link">
+      <a href="../../basics/configuration/" class="md-nav__link">
         Конфигурация
       </a>
     </li>
@@ -594,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../error_handling/" class="md-nav__link">
+      <a href="../../basics/error_handling/" class="md-nav__link">
         Обработка ошибок
       </a>
     </li>
@@ -614,12 +529,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -642,7 +559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../feature/api/" class="md-nav__link">
+      <a href="../api/" class="md-nav__link">
         Разработка API
       </a>
     </li>
@@ -656,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../feature/authentication/" class="md-nav__link">
+      <a href="../authentication/" class="md-nav__link">
         Аутентификация
       </a>
     </li>
@@ -670,7 +587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../feature/authorization/" class="md-nav__link">
+      <a href="../authorization/" class="md-nav__link">
         Авторизация
       </a>
     </li>
@@ -684,7 +601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../feature/broadcasting/" class="md-nav__link">
+      <a href="../broadcasting/" class="md-nav__link">
         Трансляция событий
       </a>
     </li>
@@ -698,7 +615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../feature/caching/" class="md-nav__link">
+      <a href="../caching/" class="md-nav__link">
         Кэширование
       </a>
     </li>
@@ -712,7 +629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../feature/compiling-assets/" class="md-nav__link">
+      <a href="../compiling-assets/" class="md-nav__link">
         Сборка assets
       </a>
     </li>
@@ -726,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../feature/commands/" class="md-nav__link">
+      <a href="../commands/" class="md-nav__link">
         Команды
       </a>
     </li>
@@ -738,11 +655,93 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../feature/csrf/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          CSRF защита
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         CSRF защита
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание раздела">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание раздела
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    Введение
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Начиная
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Шаблоны
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ajaxvueaxios" class="md-nav__link">
+    AJAX/Vue/Axios
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    Освободить маршруты от защиты
+  </a>
+  
+    <nav class="md-nav" aria-label="Освободить маршруты от защиты">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    Исключение нескольких маршрутов
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -844,50 +843,49 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    Начало
+    Введение
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    Конфигурация
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#middleware" class="md-nav__link">
-    Middleware маршрутизации
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#middleware_1" class="md-nav__link">
-    Параметры middleware
+    Начиная
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    Параметры запроса
+    Шаблоны
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#middleware_2" class="md-nav__link">
-    Создание middleware
+  <a href="#ajaxvueaxios" class="md-nav__link">
+    AJAX/Vue/Axios
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#middleware_3" class="md-nav__link">
-    Использование middleware
+  <a href="#_4" class="md-nav__link">
+    Освободить маршруты от защиты
   </a>
+  
+    <nav class="md-nav" aria-label="Освободить маршруты от защиты">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    Исключение нескольких маршрутов
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -906,120 +904,115 @@
                   
 
 
-<h1 id="middleware-masonite">Middleware Masonite</h1>
-<p>Middleware (промежуточное программное обеспечение) является чрезвычайно важным аспектом 
-веб-приложений, поскольку оно позволяет запускать важный код до или после каждого 
-запроса или определенных маршрутов. 
-В этой документации мы поговорим о том, как работает middleware, 
-как использовать и создать свои собственные middleware.</p>
-<h2 id="_1">Начало</h2>
-<p>Классы middleware размещаются внутри класса <code>Kernel</code>. 
-Все middleware — это просто классы, содержащие методы <code>before</code> и <code>after</code>.</p>
-<p>Всего существует четыре типа middleware:</p>
-<ul>
-<li>Middleware запускается перед каждым запросом.</li>
-<li>Middleware запускается после каждого запроса.</li>
-<li>Middleware запускается перед определенными маршрутами.</li>
-<li>Middleware запускается по определенным маршрутам.</li>
-</ul>
-<h2 id="_2">Конфигурация</h2>
-<p>У нас есть один из двух атрибутов конфигурации, с которыми нам нужно работать. 
-Эти атрибуты находятся в нашем файле <code>Kernel.py</code>, <code>http_middleware</code> и <code>route_middleware</code>.</p>
-<p><code>http_middleware</code> это простой список, который должен содержать ваши классы middleware. 
-Этот атрибут представляет собой список, потому что все middleware запускается 
-последовательно одно за другим, аналогично middleware Django.</p>
-<p>В файле <code>Kernel.py</code> этот тип middleware может выглядеть примерно так:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">masonite.middleware</span> <span class="kn">import</span> <span class="n">EncryptCookies</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">class</span> <span class="nc">Kernel</span><span class="p">:</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">http_middleware</span> <span class="o">=</span> <span class="p">[</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="n">EncryptCookies</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="p">]</span>
-</code></pre></div></p>
-<p>Middleware будет запускаться при каждом входящем запросе к приложению независимо от того, 
-был найден маршрут или нет.</p>
-<h2 id="middleware">Middleware маршрутизации</h2>
-<p>Middleware маршрута это словарь с произвольным именем в качестве ключа и списком middleware. 
-Это сделано для того, чтобы мы могли указать middleware на основе ключа в нашем файле маршрутов.</p>
-<p>В файле <code>Kernel.py</code> это может выглядеть примерно так:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">app.middleware.RouteMiddleware</span> <span class="kn">import</span> <span class="n">RouteMiddleware</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">class</span> <span class="nc">Kernel</span><span class="p">:</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="c1">#..</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="n">route_middleware</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        <span class="s2">&quot;web&quot;</span><span class="p">:</span> <span class="p">[</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>            <span class="n">SessionMiddleware</span><span class="p">,</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>            <span class="n">HashIDMiddleware</span><span class="p">,</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>            <span class="n">VerifyCsrfToken</span><span class="p">,</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>        <span class="p">],</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="p">}</span>
+<h1 id="csrf-masonite">CSRF защита в Masonite</h1>
+<h2 id="_1">Введение</h2>
+<p>Защита CSRF обычно влечет за собой установку уникального токена для пользователя при запросе 
+страницы, который соответствует тому же токену на сервере. Это предотвращает отправку формы без 
+правильного токена.</p>
+<h2 id="_2">Начиная</h2>
+<p>Функции CSRF для Masonite расположены в Service Provider <code>CsrfProvider</code> и <code>CsrfMiddleware</code>. Если вы 
+не хотите иметь защиту CSRF, вы можете безопасно удалить их оба.</p>
+<p><code>CsrfProvider</code> просто загружает функции CSRF в контейнер, а <code>CsrfMiddleware</code> — это то, что фактически 
+генерирует ключи и проверяет их действительность.</p>
+<h2 id="_3">Шаблоны</h2>
+<p>По умолчанию для всех запросов POST требуется CSRF токен. Мы можем добавить CSRF токен в 
+формы, используя тег <code>{{ csrf_field }}</code>, следующим образом:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;/dashboard&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;POST&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    {{ csrf_field }}
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;first_name&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 </code></pre></div>
-По умолчанию все маршруты внутри файла <code>web.py</code> будут забирать список по ключу <code>web</code>.</p>
-<h2 id="middleware_1">Параметры middleware</h2>
-<p>Вы можете передавать параметры из ваших маршрутов в middleware в тех случаях, когда middleware 
-должно работать по-разному в зависимости от вашего маршрута.</p>
-<p>Сделать это можно с помощью двоеточия <code>:</code> рядом с именем middleware вашего маршрута, 
-а затем передать эти параметры методам middleware <code>before</code> и <code>after</code>.</p>
-<p>Например, мы можем создавать middleware для регулирования запросов, и в наших маршрутах у нас 
-есть что-то вроде этого:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">Get</span><span class="p">(</span><span class="s1">&#39;/feeds&#39;</span><span class="p">,</span> <span class="s1">&#39;FeedController&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">middleware</span><span class="p">(</span><span class="s1">&#39;throttle:2,100&#39;</span><span class="p">)</span>
+Это добавит скрытое поле, которое выглядит так:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;hidden&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;__token&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;8389hdnajs8...&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>Обратите внимание на синтаксис <code>throttle:2,100</code>. 2 и 100 будут переданы в методы <code>before</code> и 
-<code>after</code> вашего middleware:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">class</span> <span class="nc">ThrottleMiddleware</span><span class="p">:</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="k">def</span> <span class="nf">before</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">minutes</span><span class="p">,</span> <span class="n">requests</span><span class="p">):</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>        <span class="c1"># throttle requests</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="k">def</span> <span class="nf">after</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">minutes</span><span class="p">,</span> <span class="n">requests</span><span class="p">):</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>        <span class="c1"># throttle requests</span>
-</code></pre></div></p>
-<h2 id="_3">Параметры запроса</h2>
-<p>Подобно тому, как мы передаём значения middleware с помощью двоеточия <code>:</code>, 
-также можно использовать <code>@</code> для передачи значения параметра.</p>
-<p>Например, мы можем создать маршрут и middleware, подобные этому.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">Get</span><span class="p">(</span><span class="s1">&#39;/dashboard/@user_id/settings&#39;</span><span class="p">,</span> <span class="s1">&#39;FeedController&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">middleware</span><span class="p">(</span><span class="s1">&#39;permission:@user_id&#39;</span><span class="p">)</span>
+Если этот токен будет изменен, Masonite выдаст исключение <code>InvalidCsrfToken</code> из 
+middleware.</p>
+<p>Если вы попытаетесь отправить запрос <code>POST</code> без <code>{{ csrf_field }}</code>, вы получите исключение 
+<code>InvalidCsrfException</code>. Это просто означает, что вам либо не хватает тега Jinja2, либо вам не хватает 
+этого маршрута из атрибута класса <code>exempt</code> в вашем middleware.</p>
+<p>Вы можете получить сгенерированный токен. Это полезно при использовании JS, где вам нужно передать 
+токен CSRF в AJAX.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> Token: {{ csrf_token }} <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </code></pre></div>
-Если перейти по адресу, <code>/dashboard/152/settings</code>, то значение <strong>152</strong> будет передано 
-в методы middleware <code>before</code> и <code>after</code>.</p>
-<h2 id="middleware_2">Создание middleware</h2>
-<p>Middleware:</p>
-<ul>
-<li>Может находиться где угодно в вашем проекте.</li>
-<li>Наследуются от базового класса <code>Middleware</code>.</li>
-<li>Должен иметь методы <code>before</code> и <code>after</code>, которые принимают параметры запроса и ответа.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">masonite.middleware</span> <span class="kn">import</span> <span class="n">Middleware</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">class</span> <span class="nc">AuthenticationMiddleware</span><span class="p">(</span><span class="n">Middleware</span><span class="p">):</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="sd">&quot;&quot;&quot; Middleware class</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="sd">    &quot;&quot;&quot;</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="k">def</span> <span class="nf">before</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>        <span class="c1">#..</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>        <span class="k">return</span> <span class="n">request</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    <span class="k">def</span> <span class="nf">after</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>        <span class="c1">#..</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>        <span class="k">return</span> <span class="n">request</span>
-</code></pre></div></li>
-</ul>
-<div class="admonition note warning">
-<p class="admonition-title">Note</p>
-<p>Важно отметить, что для продолжения жизненного цикла запроса необходимо вернуть 
-класс запроса (Request). Если вы не вернете класс запроса, никакой другой middleware не 
-будет запускаться после этого middleware.</p>
-</div>
-<p>Вот и все! Если бы мы хотели, чтобы это выполнялось после запроса, мы могли бы 
-использовать точно такую же логику в методе <code>after</code>.</p>
-<h2 id="middleware_3">Использование middleware</h2>
-<p>Если мы используем middleware для маршрута, нам нужно указать, какой маршрут должен выполнять 
-middleware. Просто добавите метод <code>.middleware()</code> к маршрутам. Это будет выглядеть примерно так:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">Route</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/dashboard&#39;</span><span class="p">,</span> <span class="s1">&#39;DashboardController@show&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;dashboard&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">middleware</span><span class="p">(</span><span class="s1">&#39;auth&#39;</span><span class="p">)</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">Route</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;/login&#39;</span><span class="p">,</span> <span class="s1">&#39;LoginController@show&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;login&#39;</span><span class="p">)</span>
-</code></pre></div></p>
+<h2 id="ajaxvueaxios">AJAX/Vue/Axios</h2>
+<p>Для ajax лучший способ передать токены CSRF — это установить токен внутри родительского 
+шаблона внутри мета-тега, например:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;csrf-token&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;{{ csrf_token }}&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+И тогда вы можете получить токен и поместить его туда, где вам нужно:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">head</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;meta[name=&quot;csrf-token&quot;]&#39;</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+Затем вы можете передать токен через заголовок X-CSRF-TOKEN вместо <code>__token</code>.</p>
+<h2 id="_4">Освободить маршруты от защиты</h2>
+<p>Не для всех маршрутов может потребоваться защита CSRF, например аутентификация OAuth или 
+webhooks. Чтобы освободить маршруты от защиты, мы можем добавить его в атрибут 
+класса <code>exempt</code> в middleware, расположенном в <code>app/middlewares/VerifyCsrfToken.py</code>:</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">app/middlewares/VerifyCsrfToken.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">masonite.middleware</span> <span class="kn">import</span> <span class="n">VerifyCsrfToken</span> <span class="k">as</span> <span class="n">Middleware</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="k">class</span> <span class="nc">VerifyCsrfToken</span><span class="p">(</span><span class="n">Middleware</span><span class="p">):</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>    <span class="n">exempt</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;/oauth/github&#39;</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+Теперь любые POST запросы, ведущие к <code>your-domain.com/oauth/github</code>, не защищены CSRF и для этого 
+маршрута не будет выполняться никаких проверок. Используйте это с осторожностью, так как защита CSRF 
+имеет решающее значение для безопасности приложений, но не для всех маршрутов она нужна.</p>
+<h3 id="_5">Исключение нескольких маршрутов</h3>
+<p>Вы также можете использовать подстановочные знаки <code>*</code> для исключения нескольких маршрутов с одним и 
+тем же префиксом. Например, вам может понадобиться сделать это:</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">app/middlewares/VerifyCsrfToken.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kn">from</span> <span class="nn">masonite.middleware</span> <span class="kn">import</span> <span class="n">VerifyCsrfToken</span> <span class="k">as</span> <span class="n">Middleware</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="k">class</span> <span class="nc">VerifyCsrfToken</span><span class="p">(</span><span class="n">Middleware</span><span class="p">):</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>    <span class="n">exempt</span> <span class="o">=</span> <span class="p">[</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a>        <span class="s1">&#39;/api/document/reject-reason&#39;</span><span class="p">,</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a>        <span class="s1">&#39;/api/document/*/reject&#39;</span><span class="p">,</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a>        <span class="s1">&#39;/api/document/*/approve&#39;</span><span class="p">,</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a>        <span class="s1">&#39;/api/document/*/process/@user&#39;</span><span class="p">,</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a>    <span class="p">]</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a>    <span class="o">...</span>
+</code></pre></div></td></tr></table></div>
+Мы немного повторяемся, поэтому вместо этого вы можете указать подстановочный знак <code>*</code>:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">app/middlewares/VerifyCsrfToken.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kn">from</span> <span class="nn">masonite.middleware</span> <span class="kn">import</span> <span class="n">VerifyCsrfToken</span> <span class="k">as</span> <span class="n">Middleware</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="k">class</span> <span class="nc">VerifyCsrfToken</span><span class="p">(</span><span class="n">Middleware</span><span class="p">):</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a>    <span class="n">exempt</span> <span class="o">=</span> <span class="p">[</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>        <span class="s1">&#39;/api/document/*&#39;</span><span class="p">,</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a>    <span class="p">]</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a>    <span class="o">...</span>
+</code></pre></div></td></tr></table></div>
 
 
 
@@ -1040,7 +1033,7 @@ middleware. Просто добавите метод <code>.middleware()</code> 
     <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
       
         
-        <a href="../controllers/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Контроллеры (Controllers)" rel="prev">
+        <a href="../commands/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Команды" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1049,20 +1042,20 @@ middleware. Просто добавите метод <code>.middleware()</code> 
               <span class="md-footer__direction">
                 Назад
               </span>
-              Контроллеры (Controllers)
+              Команды
             </div>
           </div>
         </a>
       
       
         
-        <a href="../response/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Response" rel="next">
+        <a href="../../architecture/service-provider/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Service Provider" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Вперед
               </span>
-              Response
+              Service Provider
             </div>
           </div>
           <div class="md-footer__button md-icon">
